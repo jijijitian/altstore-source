@@ -1,0 +1,70 @@
+name: Update Source
+
+on:
+  schedule:
+    - cron: '23 */12 * * *'
+  workflow_dispatch:
+    inputs:
+      fresh:
+        description: '忽略 IPA 元数据缓存，重新探测全部安装包'
+        type: boolean
+        default: false
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'assets/**'
+      - 'package.json'
+      - '.github/workflows/update.yml'
+
+concurrency:
+  group: update-source
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Restore IPA metadata cache
+        uses: actions/cache@v4
+        with:
+          path: .cache/ipa-metadata.json
+          key: ipa-metadata-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ipa-metadata-
+
+      - name: Generate source
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FRESH: ${{ inputs.fresh }}
+        run: |
+          if [ "$FRESH" = "true" ]; then
+            npm run generate:fresh
+          else
+            npm run generate
+          fi
+
+      - name: Verify source
+        run: npm run verify
+
+      - name: Commit changes
+        run: |
+          if [ -z "$(git status --porcelain -- generated/apps.json)" ]; then
+            echo "源码没有变化"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generated/apps.json
+          git commit -m "chore: 更新软件源"
+          git push

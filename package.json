@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "altstore-source",
+  "version": "0.0.0",
+  "description": "Altstore Source — 自用 AltStore / SideStore 软件源",
+  "homepage": "https://github.com/jijijitian/altstore-source#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jijijitian/altstore-source.git"
+  },
+  "license": "MIT",
+  "author": "jijijitian",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "generate": "node src/index.ts",
+    "generate:fresh": "node src/index.ts --fresh",
+    "verify": "node src/verify.ts"
+  }
+}

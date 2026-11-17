@@ -1,0 +1,928 @@
+{
+  "name": "Altstore Source",
+  "identifier": "io.github.jijijitian.altstore-source",
+  "subtitle": "自用 AltStore / SideStore 软件源",
+  "description": "个人自用的 AltStore / SideStore 软件源，收录以下开源项目的 iOS 版本：Animeko、Kazumi、Aidoku、轻书架、Wild、Yomiru、LightNovelReader。所有安装包均来自各项目 GitHub Releases 的未签名 IPA，由客户端使用本地证书签名后安装。\n\n配套仓库：\nhttps://github.com/open-ani/animeko\nhttps://github.com/Predidit/Kazumi\nhttps://github.com/LightNovelShelf/Flutter\nhttps://github.com/niuhuan/wild\nhttps://github.com/hesitation-snow/Yomiru\nhttps://github.com/Aidoku/Aidoku\nhttps://github.com/komorebiiluvu/LightNovelReader-For-IOS",
+  "iconURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/icon.png",
+  "headerURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/header.png",
+  "sourceURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/generated/apps.json",
+  "website": "https://github.com/jijijitian/altstore-source",
+  "tintColor": "#1F6FC4",
+  "featuredApps": [
+    "org.animeko.animeko",
+    "com.example.kazumi",
+    "app.aidoku.Aidoku",
+    "app.lightnovel.shelf",
+    "opensource.wild"
+  ],
+  "apps": [
+    {
+      "name": "Animeko",
+      "bundleIdentifier": "org.animeko.animeko",
+      "developerName": "openani",
+      "subtitle": "一站式弹幕追番平台",
+      "localizedDescription": "集找番、追番、看番的一站式弹幕追番平台。支持 Bangumi 云收藏同步、离线缓存、BitTorrent 下载与弹幕云过滤，基于 Kotlin Multiplatform 构建，覆盖 iOS、Android 与桌面端。\n\n配套仓库：https://github.com/open-ani/animeko\n官方网站：https://animeko.org",
+      "iconURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/icons/animeko.png",
+      "tintColor": "#1F6FC4",
+      "category": "entertainment",
+      "screenshots": {
+        "iphone": [
+          {
+            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/home.png",
+            "width": 575,
+            "height": 1280
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/anime-schedule.png",
+            "width": 575,
+            "height": 1280
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-collection.png",
+            "width": 575,
+            "height": 1280
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/search-by-tag.png",
+            "width": 575,
+            "height": 1280
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/open-ani/animeko/main/.readme/images/features/subject-details.png",
+            "width": 575,
+            "height": 1280
+          }
+        ],
+        "ipad": []
+      },
+      "versions": [
+        {
+          "version": "6.4.0",
+          "buildVersion": "6.4.99",
+          "date": "2026-10-24T04:52:28Z",
+          "localizedDescription": "- 加快桌面端网页视频解析速度\n- 优化季度拆分资源的弹幕匹配准确性\n- 新增通知中心与公告，可查看互动消息、举报处理结果和账号安全提醒，并按类型设置通知\n- 新增弹幕文字转换设置，支持按弹幕来源单独配置并预览转换效果 (#3536 by @GeneralK1ng)\n- iOS 支持 Anime4K 视频增强，提升视频画面清晰度 (#3606 by @black4der)\n- Windows 和 macOS 自动更新支持增量下载，减少下载流量并加快更新\n- 新增 JSON API 数据源\n- 修复一系列播放相关问题\n\n----\n\n- TV 端支持配置全局网络代理 (#3550 by @LoliWolf)\n- Android 支持通过包含 Bangumi 章节 ID 或剧集 ID 的 ani 链接打开指定剧集\n- 优化续播与换源体验，直接从记忆进度开始播放，减少重复缓冲并避免换源后进度回退\n- 优化剧集页播放器快捷键，切换标签页或关闭侧边栏后可直接操作视频，输入文字时避免误触快捷键 (#3542 by @Tsukumi233)\n- 修复桌面端在部分多显卡或渲染模式切换场景下视频黑屏、窗口空白的问题\n- 修复 Windows 退出播放页时可能卡死的问题\n- 修复 Windows 和 Linux 播放纯音频媒体时可能卡在加载中的问题\n- 修复 Android 播放部分 MKV 视频时无法显示压缩字幕的问题，支持 ASS 和 SRT 字幕\n- 修复 Android 暂停或播放结束后切换全屏时画面缩在左侧或被裁切的问题\n- 修复 Android 应用语言切换不生效的问题\n- 修复 Jellyfin 数据源切集后找不到下一集资源的问题\n- 修复部分网络环境下数据源因页面链接使用 HTTP 而无法加载的问题 (#3633 by @wdw89)\n- 修复进入或切换页面时自动聚焦输入框、滑块等控件，导致页面意外滚动的问题 (#3650 by @NihilDigit)\n\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v6.3.0...v6.4.0",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.4.0/ani-6.4.0.ipa",
+          "size": 48615547,
+          "minOSVersion": "16.0",
+          "sha256": "c5797e772fa654b2a6723f3f61c8332465b760435e7ea5ee18da3448cb27ad8a"
+        },
+        {
+          "version": "6.3.0",
+          "buildVersion": "6.3.99",
+          "date": "2026-10-13T06:34:15Z",
+          "localizedDescription": "- 数据源选择支持手动查找模式，支持直接浏览数据源剧集并记住选择，方便后续切集，同时优化 BT 资源搜索、筛选和列表展示\n- 新增热度排行页，可浏览完整的 Bangumi 动画热度榜\n- 大幅提升分季拆分放送的动画的选集准确性\n- Android 和 iOS 支持系统画中画播放 (#3466 by @GeneralK1ng)\n- 优化播放器截图体验，新增角落预览，支持查看、复制与系统分享\n- 观看进度支持离线处理, 上线后自动同步\n- 剧集列表按正片、特别篇等类型分组，上一集、下一集与自动连播只在同类型剧集之间切换\n- 优化 Windows 平台的兼容性和性能\n\n----\n\n新功能: \n- 改进在线视频插播广告过滤并默认开启，优化起播和续播速度，修复桌面端播放进度跳动，并在 iOS 提供广告过滤开关 (#3471 by @NihilDigit)\n- 支持折叠屏的半折叠模式，可在设置关闭 (#3446 by @U29kaXVt)\n- PikPak 失败时自动回退 BT 引擎 (#3444 by @NihilDigit)\n- Windows 支持多点触控与触控笔输入，图片查看器可双指缩放，改善触摸拖动的响应 (#3461 by @NihilDigit)\n- 播放器弹幕设置支持来源管理与时间校准 (#3480 by @Tsukumi233)\n- 重新设计数据源设置页，按订阅和自定义分组，订阅支持名称、描述、图标与详情页，可批量启用或禁用数据源，订阅内数据源改名后保留启用状态\n- 缓存选源支持手动查找，选定一集后可沿同一线路批量下载其他剧集\n- 资源自动匹配支持在主名称搜索失败时尝试季度别名和系列名，并优先使用此前搜索成功的关键词\n- 自动匹配与手动选集支持分段放送番剧的整季合并页及连续编号，改善后半部分的剧集对应关系\n- 电视版支持 Android 8.0\n- 电视版支持启动时自动检查更新，也可在设置中手动检查、下载并安装更新\n- 账号设置新增注销账号功能，确认后可永久删除账号及其数据\n- 收藏或评分后，条目详情页立即更新全站收藏数与评分统计\n- 搜索补全支持排除已看过和已抛弃的条目，最高排名筛选仅展示有 Bangumi 排名的条目\n- 加快应用更新的下载速度\n- 提升资源较多时的列表筛选速度\n- 自定义数据源编辑器分组展示列表规则与自动匹配设置，支持单独开关自动匹配、设置数据源等级，并精简导出配置\n- 自定义数据源支持通过 url template 生成详情地址，兼容搜索结果仅返回条目编号的网站 (#3574 by @wdw89)\n\n问题修复:\n- 网页数据源支持统一设置浏览器 UA，覆盖搜索、验证码验证、播放页解析与视频播放，并修复桌面验证码页面偶尔无法打开的问题\n- 移除 Selector 与 RSS 数据源中无实际作用的「使用条目名称过滤」开关\n- 修复存在未完成下载时，已缓存剧集无法被找到并离线播放的问题 (#3495 by @lmikey9550)\n- 修复 Android 切换全屏、画中画、窗口布局或切到后台后黑屏、播放中断的问题\n- 修复 Android 复制日志时崩溃，以及开启画质增强后切换全屏可能卡死的问题\n- 修复桌面端网页解析初始化较慢时网页源无法播放的问题，网页引擎不可用时提示重启应用，避免反复自动换源\n- 修复桌面端最小化到托盘时崩溃的问题\n- 修复弹弹 play 在分段放送番剧中匹配错集，以及匹配请求失败时弹幕获取异常的问题\n- 修复搜索结果被过滤后分页提前结束、遗漏后续结果的问题 (#3514 by @BagunoMushi)\n- 修复隐藏 NSFW 时仍可通过分级筛选搜出相关条目的问题，隐藏时不显示分级筛选\n- 修复動漫花園搜索含冒号的番剧名时结果异常和长时间翻页的问题\n- 修复电视版播放时屏幕自动熄灭的问题 (#3563 by @nekomoyi)\n- 画中画模式下隐藏一起看悬浮窗，退出后保留原来的位置 (#3567 by @GeneralK1ng)\n- 修复从选集对话框进入播放页后，侧滑返回手势被取消的问题\n- 修复桌面端全屏侧边栏开关异常，全屏默认隐藏侧边栏，并分别记住窗口与全屏模式的开关状态\n- 修复横屏播放时画面受屏幕挖孔影响而偏离中心的问题\n- 修复 iOS 退出全屏后状态栏间距消失的问题\n- 修复播放页手动选择的资源匹配状态显示不准确的问题\n- 修复探索页热度轮播在窗口变宽后出现空白且无法点击的问题\n- 修复下载选集页快捷选择按钮在窄屏下被挤压或遮挡的问题\n- 改善电视版列表刷新后的焦点恢复，当前卡片被移除时将焦点恢复到相邻项\n- 改善电视版探索页的无障碍朗读，避免朗读滚动进度\n- 修复部分界面文案显示多余反斜杠的问题\n- 修复sync时全部模块 androidDeviceTest 无法解析 kotlin-test (#3500 by @GeneralK1ng)\n\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v6.2.0...v6.3.0",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.3.0/ani-6.3.0.ipa",
+          "size": 46485035,
+          "minOSVersion": "14.0",
+          "sha256": "26c23902238298fd5e19ac62e3eeca9624f9f3e63f7fd5d63d1d0d0846a4e079"
+        },
+        {
+          "version": "6.2.0",
+          "buildVersion": "6.2.99",
+          "date": "2026-09-26T14:00:29Z",
+          "localizedDescription": "- 安卓 TV 版已发布，全新设计精美 UI，更多功能开发中\n- 新增显示缓冲进度条，优化缓冲机制\n- 新增系列关系图，直观展示正片、续集、番外与衍生作品\n- 新增按线路批量缓存\n- 支持发送自定义位置和颜色的弹幕\n- 搜索支持年份与季度筛选 (#3396 by @Bonger34)\n- 新增 GitHub 账号绑定，贡献者可认证以免除广告\n\n----\n\n- 新增 Bangumi 收藏冲突处理，可对照两侧收藏、选择保留内容或采用较新的记录，并在合并后同步刷新收藏列表\n- 新增「显示原名」设置，可在条目、剧集、搜索、收藏和播放等页面显示原始名称 (#3451 by @azusachino)\n- 桌面端图片查看器支持独立窗口、缩放、保存、复制及拖出图片到其他应用，并支持触摸板手势\n- 人物与角色页面支持发表评论、回复、表情、点赞和举报\n- 剧集卡片支持显示剧照、播放进度和已看完标记，可在设置中关闭剧照显示，翻页时及时清除上一页图片\n- 桌面端播放页支持拖入本地视频文件，在当前剧集中直接播放\n- 缓存详情页显示下载器状态、视频地址解析进度、连接情况及最近错误，便于排查下载停滞\n- 已缓存剧集支持显示观看进度\n- 账号设置支持换绑邮箱，以及在保留其他登录方式时解绑邮箱\n- 时间表支持显示「时间未定」，跨午夜自动切换日期，并修正剧集播出时间与开播状态判断\n- 首次启动直接进入主界面，网络检测失败时显示提示，主题与代理可在设置中调整\n- 自动选源优先使用本地缓存，在线资源无结果时可回退到 BT 资源，并优化匹配与等待策略\n- 优化数据源线路展示，保留网站原有名称、分组和顺序，避免同名线路被合并\n- 优化下载管理，批量暂停、继续和删除按操作顺序执行，减少重复创建任务，切换条目时保持标题显示\n- 优化列表封面加载及人物、制作人员信息缓存，减少滚动列表和返回页面时的重复加载与流量消耗\n- 人物与角色头像支持点击放大，移动端侧边预览中的大图可完整覆盖窗口\n- 宽屏条目详情页支持选择并复制标题\n- 调整桌面端与平板顶栏头像尺寸，使其与相邻按钮对齐\n- Windows ARM64 支持在应用内下载更新后自动安装 (#3408 by @NihilDigit)\n- 关于页新增构建信息，可查看并复制版本、分支和提交等信息，方便反馈问题\n- 开发者设置支持浏览主分支构建状态，并通过提交编号、合并请求、构建产物链接或安装包地址下载指定版本，在支持的平台上自动安装\n- Windows 与 macOS 的开发者设置支持拖入安装包，确认后自动安装并重启\n- 修复下载部分大体积视频时内存不足导致崩溃，甚至重启后反复崩溃的问题 (#3407 by @azusachino)\n- 修复 Linux Wayland 环境下内置浏览器初始化失败，导致登录和网页解析不可用的问题 (#3359 by @Vedaru)\n- 修复收藏列表末页不足一页时反复刷新、卡片重排和滚动跳动的问题 (#3374 by @vaz1306011)\n- 修复剧场版与单集作品中仅标注画质或语言的线路被错误过滤，导致资源缺失的问题 (#3345 by @GrahamZen)\n- 修复 Emby 中独立分季条目包含特别篇时的季度匹配错误\n- 修复倍速播放时无法自动跳过片头片尾的问题 (#3365 by @Tantless)\n- 修复长按倍速操作被中断后未恢复原播放速度的问题\n- 修复追番条目菜单自动关闭的问题 (#3372 by @XYenon)\n- 修复从播放页返回后剧集已看状态不更新，以及条目详情信息更新不同步的问题\n- 修复 iOS 全屏播放从后台返回后意外切换为竖屏的问题\n- 修复全屏播放时控件、侧边栏与倍速弹层的边距和裁切问题，改善 iOS 刘海与圆角屏幕适配\n- 修复桌面端按 Esc 退出全屏或关闭图片窗口时意外返回上一页的问题\n- 修复 iOS 视频解析结束后浏览器资源未释放造成的内存占用累积\n- 修复安装开发版本后点击自动更新没有反应的问题\n- 修复更新下载重试或切换下载地址后进度反复跳动的问题\n- 修复桌面端安装包版本号与发布版本不一致的问题 (#3324 by @termtate)\n- 修复 Anime Garden 资源大小显示为实际大小 1024 倍的问题\n- 修复电视版在普通启动器中的入口与电视启动器横幅显示\n- 修复移动端顶部时间文字颜色不清晰的问题 (#3366 by @U29kaXVt)\n- 修复代理测试列表中 Animeko 图标过大、撑高列表行的问题 (#3348 by @GrahamZen)\n- 修复桌面端登录按钮在鼠标悬停时阴影重叠的问题 (#3352 by @termtate)\n- Fix: 移除 AniApp 根节点 clickable，避免语义合并触发 Layout Inspector 崩溃 (#3381 by @myouo)\n\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v6.1.0...v6.2.0",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.2.0/ani-6.2.0.ipa",
+          "size": 45401084,
+          "minOSVersion": "14.0",
+          "sha256": "1c576ab9de2c8845f1547bd0047d9074f5eeb5244aa138172b734a18494838ef"
+        },
+        {
+          "version": "6.1.0",
+          "buildVersion": "60100",
+          "date": "2026-08-28T16:41:30Z",
+          "localizedDescription": "- 新增画质增强(超分)，支持 Android, Windows 和 macOS (#3291 by @black4der)\n- 新增在线源查询缓存，有缓存时跳过查源步骤，大幅加速开播速度\n- 播放页新增一起看入口，全屏时隐藏悬浮窗\n- 优化评论功能和 UI\n- 支持使用 PikPak 加速缓存 BT 源 (#3141 by @NihilDigit)\n- 新缓存管理页面\n\n----\n\n- 条目详情页封面与角色/制作人员图片支持点击放大查看\n- 修复 Windows mpv 画面偏暗\n- 支持鼠标侧键返回上一页\n- 支持 mpv 内核播放器设置自定义参数\n- 优化 jellyfin (#3190 by @jxing7036, #3244, #3248 by @IT-BillDeng)\n- 修复 Windows 原生触屏一系列问题 (#3223, #3234 by @NihilDigit)\n- 修复 Windows 10 可能会窗口透明 (#3319 by @myouo)\n- 优化性能 (#3236 by @NihilDigit)\n- 修复 macOS x86 无法打开或闪退\n- 修复 macOS 可能因为音频而崩溃\n- 修复 BT 源播放错误或无法开始播放 (#3337 by @GrahamZen)\n- 支持为 BT 下载设置额外的 trackers\n- 修复桌面端图片比较糊\n- 修复一系列 Linux 问题 (#3261 by @NihilDigit)\n- 修复手动匹配的弹幕请求会随着换集失效 (#3254 by @GrahamZen)\n- 优化数据源管理页长按批量编辑功能\n- 修复条目详情页的剧集卡片无法长按标记看过\n- 修复条目详情页 Tab 换行问题 (#3229 by @arpitagarwal1301)\n- 修复 Windows 托盘状态下再次启动会卡死 (#3317 by @Tantless)\n- 修复播放器倍速状态与 UI 不一致 (#3323 by @SXP-Simon)\n- 新增数据源工作原理示意动画\n- 为 macOS 暂时禁用 Accessibility 以修复闪退 (#3325 by @black4der)\n- 支持配置 ExoPlayer 的画质增强预热，解决黑屏或系统增强功能失效\n- 新增开源许可页面，可在设置 - 关于 - 鸣谢中查看\n- 修复异常指纹过滤默认生效且关闭开关无效的问题 (#3338 by @GrahamZen)\n- 修复 BT 缓存统计不准确 (#3339 by @GrahamZen)\n- Android 修复 WebView 正常无法释放 (#3340 by @GrahamZen)\n- 修复 Toast 配色没有跟随应用主题 (#3347 by @GrahamZen)\n\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v6.0.0...v6.1.0",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.1.0/ani-6.1.0.ipa",
+          "size": 44425669,
+          "minOSVersion": "14.0",
+          "sha256": "1e0b822fa17679c5b1fe0667e4f36d9b0d419aff676648e1113006ec3d8994c4"
+        },
+        {
+          "version": "6.0.0",
+          "buildVersion": "60000",
+          "date": "2026-08-01T18:38:19Z",
+          "localizedDescription": "- 支持与好友一起看番，大幅改善自动选源能力和速度，视频内广告过滤\n- 全新条目详情页，支持查看角色和声优的信息和关联条目\n- 桌面端切换为 mpv 播放器内核，大幅优化性能\n\n----\n\n- `[Desktop]` 新增 Windows arm64 支持\n- `[All]` 新增实验性 HLS 贴片广告过滤 (#3097 by @NihilDigit)\n- `[All]` 数据源支持多平台图片验证码自动处理 (#3172 by @proffitteoy)\n- `[Desktop]` Windows ARM64 桌面端新增构建支持 (#3155 by @NihilDigit)\n- `[All]` 新增与好友一起看 (syncplay) (proposed by @qian-xuan)\n- `[Desktop]` Windows 桌面端支持原生触控输入 (#3169 by @NihilDigit, #3221 by @NihilDigit, #3234 by @NihilDigit)\n- `[All]` 播放进度条支持悬停或拖动时预览画面帧\n- `[All]` 新增播放器播放信息叠加面板，可查看码率、解码器等播放状态 (#3120 by @wjb6666)\n- `[Mobile]` 移动端快进和进度条拖动交互更顺手 (#3161 by @NihilDigit)\n- `[All]` 播放器支持自定义播放速度控制 (#3187 by @NihilDigit)\n- `[Mobile]` Android 支持视频截图、改进手势快进，并支持 libass 渲染字幕，WSOLA 倍速引擎 (#3156 by @NihilDigit)\n- `[Mobile]` 新增移动端毛玻璃应用栏设置\n- `[All]` 新增缓存管理和数据源管理多选模式，悬浮批量操作工具栏\n- `[Mobile]` 改进播放器键盘快捷键行为 (#3159 by @NihilDigit)\n- `[Desktop]` Linux 桌面端支持动态取色 (#3146 by @NihilDigit)\n- `[All]` 支持配置跳过 85s 按钮的时长为 80、 85 和 90 秒\n- `[All]` 数据源启用或禁用后保留测试结果 (#3106 by @Mystery406)\n- `[All]` 不再在日志中记录 Bangumi 访问令牌 (#3114 by @proffitteoy)\n- `[All]` 修复代理认证头未正确使用配置的问题 (#3115 by @proffitteoy)\n- `[All]` 改进剧集长按反馈 (#3118 by @TexasOct)\n- `[All]` 修复集合列表条目封面不显示的问题 (#3123 by @proffitteoy)\n- `[Desktop]` 优化 macOS 和 Linux 的稳定性 (#3144 by @NihilDigit, #3145 by @NihilDigit, #3157 by @W-Nana, #3195 by @NihilDigit, #3214 by @XYenon, #3216 by @NihilDigit)\n- `[Desktop]` Linux AppImage 支持增量更新 (#3149 by @NihilDigit)\n\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v5.7.1...v6.0.0",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v6.0.0/ani-6.0.0.ipa",
+          "size": 41391524,
+          "minOSVersion": "14.0",
+          "sha256": "edfee293f3b056440366202d79d97eef62f3f0fbe91be57517b60d4c2b51fdf3"
+        },
+        {
+          "version": "5.7.1",
+          "buildVersion": "50710",
+          "date": "2026-07-09T01:17:21Z",
+          "localizedDescription": "- 修复集合列表海报不显示的问题 (#3123 by @proffitteoy)\n\n----\n\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v5.7.0...v5.7.1",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v5.7.1/ani-5.7.1.ipa",
+          "size": 30505730,
+          "minOSVersion": "14.0",
+          "sha256": "920b3859975006404b254f78fe48feebb5c1149aecbf3ce0f0db21cb02afa08c"
+        },
+        {
+          "version": "5.7.0",
+          "buildVersion": "50700",
+          "date": "2026-06-28T06:14:58Z",
+          "localizedDescription": "- 新增播放历史云同步\n- 收藏页新增分页缓存机制 (#3081 by @GeneralK1ng)\n- 修复快速选择数据源问题\n- 修复无法加载保存的播放进度\n----\n\n- 修复离线弹幕缓存回退异常，离线时弹幕加载更可靠\n- 修复 Android WebView 验证码处理的线程问题\n- 改进桌面端内置浏览器生命周期清理，减少资源残留和异常\n- 限制浏览器并发仅作用于数据源查询，降低无关浏览器任务受到影响的概率\n- 修复媒体选择器自动选择异常\n- 启动时会清理过期登录令牌，减少异常登录状态\n- 优化搜索结果和推荐列表的条目标识，减少重复条目导致的显示异常\n- 调整提示消息在主线程显示，提升提示弹出的稳定性\n\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v5.6.0...v5.7.0",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v5.7.0/ani-5.7.0.ipa",
+          "size": 30504854,
+          "minOSVersion": "14.0",
+          "sha256": "02b29bd984ff1cd55b5711e631096d01430217619ed3bd757886d9a4084ed47e"
+        },
+        {
+          "version": "5.6.0",
+          "buildVersion": "50600",
+          "date": "2026-05-28T19:26:21Z",
+          "localizedDescription": "- 首页推荐、放送日程、搜索和短评改用 Animeko 服务\n- 启用剧集评论表情回复，并优化评论区交互和显示效果\n- 优先使用弹弹 play 的 Bangumi ID 映射，提升条目匹配准确性\n\n----\n\n- 增加更多验证码检测，并在离开剧集页后及时清理网页验证码资源\n- 更多界面文本支持多语言显示 (#2930 by @Mystery406)\n- 修复搜索结果使用键盘向下导航时可能选中无效位置的问题 (#3021 by @Mystery406)\n- 修复 macOS 退出后桌面端窗口大小无法保留的问题 (#3032 by @SakuraKy)\n- 修复 Bangumi 登录过期提示中的 Snackbar 布局问题\n\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v5.5.2...v5.6.0",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v5.6.0/ani-5.6.0.ipa",
+          "size": 30337983,
+          "minOSVersion": "14.0",
+          "sha256": "02de47403bcf80d168b91242a5f56b9a10b44264938a3ab132d9d7a14acd6b5f"
+        },
+        {
+          "version": "5.5.2",
+          "buildVersion": "50520",
+          "date": "2026-05-26T09:33:48Z",
+          "localizedDescription": "- 修复桌面端 JCEF 进程占用资源过高问题\n- 支持 Desktop 刷新验证码页面\n\n---\n\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v5.5.1...v5.5.2",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v5.5.2/ani-5.5.2.ipa",
+          "size": 29924579,
+          "minOSVersion": "14.0",
+          "sha256": "c39ea796fa46e681972f6157ead1eb619fe2f1f3f0f4eecbce80d8ce9f31b87c"
+        },
+        {
+          "version": "5.5.1",
+          "buildVersion": "50510",
+          "date": "2026-05-24T06:22:10Z",
+          "localizedDescription": "- 新增 PikPak 云端离线下载，可作为 BT 播放不稳定时的备选方案 (#2978 by @NihilDigit)\n- 桌面端支持最小化到系统托盘 (#2934 by @Mystery406)\n- Linux 播放时可通过 D-Bus 阻止屏幕保护和自动锁屏 (#2925 by @moetayuko)\n- 搜索结果支持按发布日期排序 (#2941 by @wellorbetter)\n- 弹幕正则过滤规则支持导入导出，并会纳入设置备份 (#3007 by @Calv1nJ)\n- 播放页、剧集页和弹幕列表体验优化，手机端也可查看弹幕列表\n- Bangumi 登录过期时会提示重新登录\n- 优先使用弹弹 Play 的 Bangumi 条目映射，提升条目匹配准确性\n\n----\n\n- 修复 Android 端语言选择不生效的问题 (#2929 by @Mystery406)\n- 修复点击搜索历史后搜索结果可能消失的问题 (#2942 by @wellorbetter)\n- 修复搜索结果键盘方向键导航可能越界的问题 (#3021 by @Mystery406)\n- 修复 iOS 发送剧集评论时可能崩溃的问题 (#2949 by @wellorbetter)\n- 修复切换媒体源后首个媒体源失败时可能错误自动跳到下一集的问题 (#2987 by @GeneralK1ng)\n- 修复桌面端读取剪贴板文本失败的问题 (#3004 by @Restia-Ashbell)\n- 修复选择器 URL 查询参数可能被错误编码的问题 (#3014 by @Restia-Ashbell)\n- 修复 macOS 桌面端无法修改头像的问题 (#3017 by @undefined-hestudio)\n- 完善账号弹窗等界面的多语言文本 (#2944 by @wellorbetter)\n- 完善部分多语言文本，并在桌面端语言设置中加入系统语言选项 (#3008 by @ByteFlowing1337)\n- 修复部分桌面内置网页组件资源缺失导致的显示问题 (#3010 by @ByteFlowing1337)\n- 修复 HTTP 下载器处理媒体 ID 时的异常情况\n\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v5.4.4...v5.5.1",
+          "downloadURL": "https://github.com/open-ani/animeko/releases/download/v5.5.1/ani-5.5.1.ipa",
+          "size": 29923207,
+          "minOSVersion": "14.0",
+          "sha256": "dc7d8598251cbdcd5e27edff4fe8268cf5376a68aec3f631b17d9089722238b0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSCameraUsageDescription": "用于扫描电视端登录时显示的二维码。"
+        }
+      }
+    },
+    {
+      "name": "Kazumi",
+      "bundleIdentifier": "com.example.kazumi",
+      "developerName": "Predidit",
+      "subtitle": "自定义规则的番剧采集播放器",
+      "localizedDescription": "使用 Flutter 开发的番剧采集与在线观看 App。用基于 XPath 语法的自定义规则抓取站点，支持规则导入与分享、弹幕、批量下载缓存，以及基于 Anime4K 的实时超分辨率。\n\n配套仓库：https://github.com/Predidit/Kazumi\n官方网站：https://kazumi.app",
+      "iconURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/icons/kazumi.png",
+      "tintColor": "#7FA82E",
+      "category": "entertainment",
+      "screenshots": {
+        "iphone": [
+          {
+            "imageURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/static/screenshot/img_1.png",
+            "width": 1228,
+            "height": 2700
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/static/screenshot/img_2.png",
+            "width": 1228,
+            "height": 2700
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/static/screenshot/img_3.png",
+            "width": 1228,
+            "height": 2700
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/static/screenshot/img_4.png",
+            "width": 1228,
+            "height": 2700
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/static/screenshot/img_5.png",
+            "width": 1228,
+            "height": 2700
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/static/screenshot/img_6.png",
+            "width": 1228,
+            "height": 2700
+          }
+        ],
+        "ipad": []
+      },
+      "versions": [
+        {
+          "version": "2.4.4",
+          "buildVersion": "20404",
+          "date": "2026-11-12T10:27:44Z",
+          "localizedDescription": "- 适配 flutter 3.50",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.4/Kazumi_ios_2.4.4_no_sign.ipa",
+          "size": 30341213,
+          "minOSVersion": "15.0",
+          "sha256": "88d1146bf466a7dbbfd3a0649a8b36fb15a10e6186aca8388080c2e94747bfca"
+        },
+        {
+          "version": "2.4.3",
+          "buildVersion": "20403",
+          "date": "2026-11-04T12:12:33Z",
+          "localizedDescription": "- 新增自定义规则仓库支持 (#2485) (@chendianshuiyin)\n- 优化远程投屏体验 (#2797 #2798) (@DSplay123)\n- 新增 iPhone Duo 内屏支持 (@Predidit)\n- 修复批量下载时排队剧集没有缓存弹幕的问题 (#2780) (@wanxinlei1)\n- 修复退出后系统托盘图标残留的问题 (#2762) (@fgfsgsgvo)\n- 修复 deb 软件包在精简安装的发行版上无法启动的问题 (#2755) (@Huayuluoshi)\n- 优化追番页切换分类时的流畅度 (@Predidit)\n- 文档更新 (@Predidit)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.3/Kazumi_ios_2.4.3_no_sign.ipa",
+          "size": 30439714,
+          "minOSVersion": "15.0",
+          "sha256": "d62822b316d361a8296cb0b7e1ca49b55d9378463b181ea624562e147a2c7516"
+        },
+        {
+          "version": "2.4.2",
+          "buildVersion": "20402",
+          "date": "2026-10-23T09:43:33Z",
+          "localizedDescription": "- 修复部分地区规则仓库无法访问的问题",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.2/Kazumi_ios_2.4.2_no_sign.ipa",
+          "size": 30521004,
+          "minOSVersion": "15.0",
+          "sha256": "4fca62ccc6f1a0abb4d1666efe32bac961084f432225f241919743cbc78a9545"
+        },
+        {
+          "version": "2.4.1",
+          "buildVersion": "20401",
+          "date": "2026-10-22T15:04:45Z",
+          "localizedDescription": "- 修复规则镜像在部分地区无法访问的问题 (#2747 #2748) (@Predidit)\n- 修复 linux 平台 deeplink 无法使用的问题 (@Tobiichi-Origuchi)\n> [!NOTE]\n> 这是 2.4.0 的热修复版本，更多更新日志参考 2.4.0",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.1/Kazumi_ios_2.4.1_no_sign.ipa",
+          "size": 30514613,
+          "minOSVersion": "15.0",
+          "sha256": "e573c13a99c9f9aa2c28450f4a798b69df5cc616e5b09ba5ffdc13e5ce46957b"
+        },
+        {
+          "version": "2.4.0",
+          "buildVersion": "20400",
+          "date": "2026-10-22T09:47:59Z",
+          "localizedDescription": "- 新增 deeplink 支持 (#2628 #2281) (@samuelhe52) (@Predidit)\n- 现在移动平台编辑弹幕时自动暂停播放 (#2708 #933) (@JesseLee-CN)\n- 播放器进度条现在显示目标时间 (@rua103)\n- 修复部分老旧 android 设备打开视频时一直加载的问题 (#2727) (@Predidit)\n- 文档更新 (@0Chencc)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.0/Kazumi_ios_2.4.0_no_sign.ipa",
+          "size": 30514666,
+          "minOSVersion": "15.0",
+          "sha256": "65fa17bb242756e381a2104dd691c9085b449fd8731fb5743e1f49d9968cd7ac"
+        },
+        {
+          "version": "2.3.9",
+          "buildVersion": "20309",
+          "date": "2026-10-14T13:21:43Z",
+          "localizedDescription": "- 修复 Windows 偶发的闪退问题 (#2668) (@Predidit)\n- 修复 Android 平台播放内容开头数秒可能被跳过的问题 (#2687) (@Predidit)\n- 现在可以选择 GitHub 或镜像源进行应用更新 (@liangyuR)\n- Android 平台现在支持自定义视频下载目录 (#2464 #2632) (@LiggMax)\n- 截图挑选面板新增全选功能 (#2603) (@rinnki-L)\n- 规则 API 检索模式支持通过模板将 ID 拼接为详情页链接 (@JesseLee-CN)\n- 修复 iOS 平台应用更新后离线缓存失效的问题 (#2611 #2243) (@liangyuR)\n- 修复横屏时播放页侧边面板左侧出现多余空白的问题 (@LiggMax)\n- 其他UI改进 (@Predidit)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.9/Kazumi_ios_2.3.9_no_sign.ipa",
+          "size": 30477942,
+          "minOSVersion": "15.0",
+          "sha256": "af3f32ee66cdb2516a599b032fe91c316bff4c3c284a560b4884b3607b15448d"
+        },
+        {
+          "version": "2.3.8",
+          "buildVersion": "20308",
+          "date": "2026-10-07T03:41:05Z",
+          "localizedDescription": "- 优化截图交互 (#2599) (@Predidit)\n- 统一应用内下拉菜单样式 (@Predidit)\n- 修复大字体下番剧详情页追番按钮与其他按钮重叠而无法点击的问题 (#2622) (@Predidit)\n- 修复宽屏设置页重复点击已选中分类时二级页面重复嵌套的问题 (#2607) (@Predidit)\n- 修复鼠标悬停时播放器控制栏动画反复重启的问题 (@Predidit)\n- 修复分集评论标题栏显示多余副标题的问题 (@Predidit)\n- 其他UI改进 (@Predidit)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.8/Kazumi_ios_2.3.8_no_sign.ipa",
+          "size": 30463104,
+          "minOSVersion": "15.0",
+          "sha256": "d3bede0e72bfa8fd092e20e8a6e6e854462811296c1ab1d8a3507ff6e263dc69"
+        },
+        {
+          "version": "2.3.7",
+          "buildVersion": "20307",
+          "date": "2026-09-30T10:52:08Z",
+          "localizedDescription": "- 改进的视频截图功能 (#1697 #1144) (@Predidit)\n- 新增弹幕简繁转换设置 (#1108 #1923) (@Predidit)\n- 番剧详情页面现在支持复制标题与保存封面 (#2575) (@Predidit)\n- 现在可以在滑动快进时滑至播放器边缘取消操作 (#2592) (@Predidit)\n- 新增 Bangumi 番剧条目 ECH 加速选项 (@Predidit)\n- 修复手动检索弹幕时搜索记录无法保留的问题 (@moonrailgun)\n- 修复部分视频来源无法触发人机验证的问题 (#2578) (@jzy834894319)\n- 修复 Linux 平台打开播放器、切换剧集或播放结束时可能崩溃的问题 (#2587) (@Predidit)\n- 修复桌面平台设置子页面窗口控制按钮重复显示的问题 (#2589) (@Predidit)\n- 修复切换原生标题栏设置后窗口控制按钮显示异常的问题 (@Predidit)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.7/Kazumi_ios_2.3.7_no_sign.ipa",
+          "size": 30538813,
+          "minOSVersion": "15.0",
+          "sha256": "55ebb9df75db399c57dce431397d19258204a31625ca347e8d859992be42f212"
+        },
+        {
+          "version": "2.3.6",
+          "buildVersion": "20306",
+          "date": "2026-09-23T11:56:14Z",
+          "localizedDescription": "- 修复部分地区图片资源无法加载的问题 (#2581)\n> [!NOTE]\n> 这是 2.3.4 的热修复版本，更多更新日志参考 2.3.4",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.6/Kazumi_ios_2.3.6_no_sign.ipa",
+          "size": 30406530,
+          "minOSVersion": "15.0",
+          "sha256": "77e0eb85a3bc3047b59809b491653091999fa6713bdf35684e59f776a51b9212"
+        },
+        {
+          "version": "2.3.5",
+          "buildVersion": "20305",
+          "date": "2026-09-23T09:36:50Z",
+          "localizedDescription": "- 修复部分地区图片资源无法加载的问题 (#2581)\n- 修复搜索记录淘汰不正确的问题 (#2580)\n> [!NOTE]\n> 这是 2.3.4 的热修复版本，更多更新日志参考 2.3.4",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.5/Kazumi_ios_2.3.5_no_sign.ipa",
+          "size": 30404211,
+          "minOSVersion": "15.0",
+          "sha256": "0b41614b9fb9c43ceff49c22706abf98d5cbca6685a8c552762021762dffda04"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "用于把截图和缓存的图片保存到相册。"
+        }
+      }
+    },
+    {
+      "name": "Aidoku",
+      "bundleIdentifier": "app.aidoku.Aidoku",
+      "developerName": "Aidoku",
+      "subtitle": "开源漫画阅读器",
+      "localizedDescription": "面向 iOS、iPadOS 与 macOS 的开源漫画阅读器。通过书源扩展在线获取内容，也可以连接局域网内的 Komga、Kavita 服务器，支持书架管理、下载离线与阅读进度同步。\n\n配套仓库：https://github.com/Aidoku/Aidoku\n官方网站：https://aidoku.app",
+      "iconURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/icons/aidoku.png",
+      "tintColor": "#D91F3C",
+      "category": "lifestyle",
+      "screenshots": {
+        "iphone": [
+          {
+            "imageURL": "https://raw.githubusercontent.com/Aidoku/Website/main/static/images/library-noframe.png",
+            "width": 1206,
+            "height": 2622
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/Aidoku/Website/main/static/images/source-noframe.png",
+            "width": 1206,
+            "height": 2622
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/Aidoku/Website/main/static/images/reader-noframe.png",
+            "width": 1206,
+            "height": 2622
+          }
+        ],
+        "ipad": []
+      },
+      "versions": [
+        {
+          "version": "0.9",
+          "buildVersion": "4",
+          "date": "2026-10-16T22:25:27Z",
+          "localizedDescription": "A small build update for 0.9 with a number of bug fixes.\n\n- Fixed some pages not loading in webtoon reader\n- Improved webtoon reader memory usage (hopefully fixes crash after reading multiple chapters)\n- Fixed crash when searching anywhere in the macOS app\n- Various other bug fixes",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9-4/Aidoku.ipa",
+          "size": 14753154,
+          "minOSVersion": "15.0",
+          "sha256": "473e28cda194e57434f2a9e3ad26abbc8f9c18784047eb0e931a51b47df8970c"
+        },
+        {
+          "version": "0.9",
+          "buildVersion": "3",
+          "date": "2026-09-03T20:17:08Z",
+          "localizedDescription": "- OCR dictionary support (iOS 18+): import Yomitan-compatible dictionaries in the app and look up words while reading.\n- Suwayomi built-in source: read and track from a Suwayomi instance, just like Komga and Kavita.\n- Auto scroll for webtoon reader: enable and press the play button to scroll without touching your device.\n- Fixed CloudFlare handling: CloudFlare issues that caused external sources to break should be resolved.\n- Overall performance improvements: the library loads much faster (@Amqx), and the webtoon reader was improved.\n- Source stability fixes and disable option: the issue where sources were causing the app to crash should not happen again, and now you can even disable a source that is broken until it receives an update.\n- Many more things: see [the website](https://aidoku.app/release-notes/) for a more complete list.",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9/Aidoku.ipa",
+          "size": 14731108,
+          "minOSVersion": "15.0",
+          "sha256": "86405861d3a0c90876a90aa1ca668bee54f4555a56249fede4444be5382833e8"
+        },
+        {
+          "version": "0.8.4",
+          "buildVersion": "1",
+          "date": "2026-07-03T05:27:41Z",
+          "localizedDescription": "- Fixes for iOS 27: fixed settings pages freezing the app, along with other minor visual issues.\n- Improved backup restore time: restores should now take seconds instead of minutes. (@Amqx)\n- Failed download page retrying: less chance of missing pages in downloaded chapters from sources with aggressive rate limits. (@pxseu)\n- New chapter notifications (experimental): when Aidoku refreshes in the background, notification(s) of new chapters should be sent if enabled. (@Zareix)\n- Various other bug fixes and small features: see [the website](<https://aidoku.app/release-notes/>) for a more complete list.",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.8.4/Aidoku.ipa",
+          "size": 10136987,
+          "minOSVersion": "15.0",
+          "sha256": "4629068fac5fe7155e8d0d6eb4dcb594a63eb5485ec754b4d7ebb11371c54947"
+        },
+        {
+          "version": "0.8.3",
+          "buildVersion": "3",
+          "date": "2026-05-18T19:02:38Z",
+          "localizedDescription": "- New migration flow: view series details and optionally copy data instead of completely migrating.\n- Kavita API key login: in addition to OIDC and basic auth, use an API key if it works better for you.\n- Continuous with gaps reading mode: like the Webtoon mode, but with gaps between pages.\n- Fixed tracker search bar: should show again on iOS 26.4+.\n- Improved double page reader: new page offset setting and double page handling fixes.\n- Various other bug fixes and small features: see [the website](<https://aidoku.app/release-notes/>) for a more complete list.",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.8.3/Aidoku.ipa",
+          "size": 9287296,
+          "minOSVersion": "15.0",
+          "sha256": "261b0d1c3eb6df4bbd5d105cb385cc7b516ac64c455d084eaebe86ee044159a1"
+        },
+        {
+          "version": "0.8.2",
+          "buildVersion": "4",
+          "date": "2026-03-18T13:47:13Z",
+          "localizedDescription": "- Filter groups: save library filter configurations to categories library items.\n- Saved source searches: save and load search text and filter configurations in sources.\n- MangaBaka tracker: log in and track items with mangabaka.org.\n- Hide bars on swipe setting: automatically dismiss bars in the reader after swiping to the next page.\n- Missing source list indicator: displays a warning if a source was removed from a source list and will no longer receive updates.\n- Improved text reader (experimental): now with a paged reading style and font configuration for text-only chapters.\n- Scanlator affinity: prefers next chapters from the scanlator you're already reading.\n- Komga/Kavita mirror list option and various source improvements\n- Various bug fixes and stability improvements: see [the website](https://aidoku.app/release-notes/) for a more complete list.",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.8.2/Aidoku.ipa",
+          "size": 9119989,
+          "minOSVersion": "15.0",
+          "sha256": "a5a131bf876a3f6aa4bd845aff57c816722037d54033137c3a8171a34caf80a0"
+        },
+        {
+          "version": "0.8.1",
+          "buildVersion": "3",
+          "date": "2026-02-09T15:18:25Z",
+          "localizedDescription": "- Pinned sources should stay pinned\n- Error when restoring chapters from backup resolved\n- Insights page more accurately determines chapter read count\n- Kavita source login issues resolved\n- Lots of other fixes (30+)! Check [the website](https://aidoku.app/release-notes/) for a more complete list.",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.8.1/Aidoku.ipa",
+          "size": 8636349,
+          "minOSVersion": "15.0",
+          "sha256": "b9e5ab726b1f2de591473d9e3752eb4e60821884fe48f8386d140679a2a1903e"
+        },
+        {
+          "version": "0.8",
+          "buildVersion": "3",
+          "date": "2026-01-03T16:07:38Z",
+          "localizedDescription": "- New icon: updated for liquid glass.\n- Fluid transitions: Aidoku now fits in with more iOS 26 apps, letting you swipe to close the reader and other views.\n- Insights: reading time is now tracked (starting from this update), and you can see reading statistics in the insights page.\n- Library improvements: list mode, additional filter options, persistent filters, and improved multi-select.\n- Auto reader background color option: determine the reader background based on page color.\n- Live Text support: copy text and use Apple's built in image text translation feature by pressing the live text icon in the bottom right corner of page images.\n- Incognito indicator: a noticeable banner at the top now reminds you when reading history won't be tracked.\n- Fixed library refresh: should be more stable/consistent now, as I've seen a lot of people with issues recently.\n- Lots of other things! Check [the website](https://aidoku.app/release-notes/) for a more complete list.",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.8/Aidoku.ipa",
+          "size": 8599915,
+          "minOSVersion": "15.0",
+          "sha256": "70146d72191e0f20213bb01149d58ca7bc8a87be2fce7233e01d701e282f066e"
+        },
+        {
+          "version": "0.7.3",
+          "buildVersion": "4",
+          "date": "2025-11-17T15:00:18Z",
+          "localizedDescription": "- Background downloading (iOS 26+): feel free to switch off the app while your downloads (and library refresh) complete.\n- Download compression: downloading should now be significantly faster and result in less storage usage by default, and you can now export downloaded chapters as cbz files.\n- Automatic backups: Aidoku can now schedule periodic backups in the background just in case something happens and you need to restore old data.\n- Built-in Kavita source and tracker (just like Komga).\n- New search tab: redesigned look, now with filter options and search history.\n- Local files improvements: metadata can now be parsed from ComicInfo.xml files (and downloads from other sources now save this).\n- Download badges: see how many downloaded chapters you have, next to the unread badge.\n- Many bug fixes: various iPadOS issues, Komga PDF pages, download crashes, auto tracking logic, etc.",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.7.3/Aidoku.ipa",
+          "size": 6197921,
+          "minOSVersion": "15.0",
+          "sha256": "cae27bcd622331cfa648dd562b648c7ac8a528815f692644e6c22c317aaa5631"
+        },
+        {
+          "version": "0.7.2",
+          "buildVersion": "3",
+          "date": "2025-10-15T17:54:22Z",
+          "localizedDescription": "- New settings tab: now with better organization and search support.\n- Wide page isolation and splitting: when using the double page layout (e.g. on iPads), wide pages can be detected and isolated, and when using the single page layout, there’s a new option to automatically split into two pages.\n- Komga tracker: automatically tracks reading history for Komga sources, including page progress in individual volumes.\n- Library refresh progress bar: when a library refresh starts, there’s now a better indicator of the progress towards completion.\n- Backup user settings: the content that’s backed up can now be configured, and allows including user settings.\n- Other features and fixes: content rating tags in search results, an invert tap zones option, a Bangumi tracker, relative dates for chapter releases, and many bug fixes!\n\nThe latest ipa is `Aidoku.ipa`, build 0.7.2 (3), up to commit be6089aefa58d4a2bd77c0c93dcad40deb19bbf6.",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.7.2/Aidoku.ipa",
+          "size": 5818726,
+          "minOSVersion": "15.0",
+          "sha256": "0490e3c9750a44a8e2d6126dda772bd3d28a1315400abb25839af3c993bac5fb"
+        },
+        {
+          "version": "0.7.1",
+          "buildVersion": "2",
+          "date": "2025-08-07T18:14:37Z",
+          "localizedDescription": "- Tap zones: tap the sides of the screen to switch pages without needing to swipe.\n- Download manager: view and read all downloaded chapters, and see more detailed storage usage.\n- Image upscaling (experimental): download ML image upscaling models to improve low quality images while reading. Note that this can increase the time it takes for images to load, especially for slower/older devices, and is still very much an experimental feature.\n- Keyboard support: use a connected keyboard (or if you’re just using macOS) to turn pages.\n- Custom series covers: select from alternate covers if a source provides them, or upload your own cover images.\n- Rewritten History tab: it should hopefully look pretty much the same… but be a bit less buggy! The excessive stuttering, long loading times, and needless reloading in some cases were fixed.\n- Other features and fixes:\n    - Manual page image reload option (if a page loads incorrectly)\n    - Uploading local files should actually work now\n    - Tracker searching now has a toggle-able filter for NSFW results\n    - …and more!",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.7.1/Aidoku.ipa",
+          "size": 5619068,
+          "minOSVersion": "15.0",
+          "sha256": "f33f998a402f8e688dc91acf9b1ee61dfd8ee1b7d09744400adaedeaf03b0772"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "aps-environment",
+          "com.apple.developer.icloud-container-environment",
+          "com.apple.developer.icloud-container-identifiers",
+          "com.apple.developer.icloud-services",
+          "com.apple.developer.ubiquity-container-identifiers",
+          "com.apple.developer.ubiquity-kvstore-identifier",
+          "com.apple.developer.user-fonts",
+          "get-task-allow"
+        ],
+        "privacy": {
+          "NSFaceIDUsageDescription": "用于锁定应用内需要保护的设置项。",
+          "NSLocalNetworkUsageDescription": "用于连接局域网内的 Komga 与 Kavita 服务器。",
+          "NSPhotoLibraryUsageDescription": "用于把漫画页面保存到相册。"
+        }
+      }
+    },
+    {
+      "name": "轻书架",
+      "bundleIdentifier": "app.lightnovel.shelf",
+      "developerName": "LightNovelShelf",
+      "subtitle": "轻书架官方客户端",
+      "localizedDescription": "轻书架（LightNovelShelf）官方 Flutter 客户端，面向 iOS 与 iPadOS。支持书架同步、在线阅读与离线缓存，可将图片保存到专属相册；平板端提供侧边导航与左右分栏布局。\n\n配套仓库：https://github.com/LightNovelShelf/Flutter",
+      "iconURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/icons/lightnovelshelf.png",
+      "tintColor": "#4756C8",
+      "category": "lifestyle",
+      "screenshots": {
+        "iphone": [],
+        "ipad": []
+      },
+      "versions": [
+        {
+          "version": "1.13.2",
+          "buildVersion": "26",
+          "date": "2026-10-18T10:47:40Z",
+          "localizedDescription": "- 支持自动更新。\n- 平板端新增侧边导航和左右分栏布局。\n- 阅读器默认开启双页显示。\n- 设置页新增重置所有设置。\n- 我的道具新增使用入口，支持使用改名卡。\n- 搜索页移除页码提示。",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.13.2/app-ios-unsigned.ipa",
+          "size": 11957867,
+          "minOSVersion": "15.0",
+          "sha256": "b35b68e1e2af4fe686a7d68fc5d7aeaee3986c832fb5038c74baef2c4f5b1a35"
+        },
+        {
+          "version": "1.13.1",
+          "buildVersion": "25",
+          "date": "2026-10-16T08:29:42Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.13.0...v1.13.1",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.13.1/app-ios-unsigned.ipa",
+          "size": 11904336,
+          "minOSVersion": "15.0",
+          "sha256": "82e4750f7845fb5496e133fcf8fcddf9b001d819d7a26e8523e4dd91aa8ea0ed"
+        },
+        {
+          "version": "1.12.3",
+          "buildVersion": "23",
+          "date": "2026-09-21T07:33:40Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.12.2...v1.12.3",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.12.3/app-ios-unsigned.ipa",
+          "size": 10227079,
+          "minOSVersion": "15.0",
+          "sha256": "2cbd8a61cc916b871ba4b8737e4fd310690caaede5812dd352053950d260fcd9"
+        },
+        {
+          "version": "1.12.2",
+          "buildVersion": "22",
+          "date": "2026-09-21T05:58:10Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.12.1...v1.12.2",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.12.2/app-ios-unsigned.ipa",
+          "size": 10224288,
+          "minOSVersion": "15.0",
+          "sha256": "12ed4f52f67fcf14ad26e49f6d4dfd0dc2cae3c6e3cef92a0fb157eb735568cb"
+        },
+        {
+          "version": "1.12.1",
+          "buildVersion": "21",
+          "date": "2026-09-21T05:53:03Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.12.0...v1.12.1",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.12.1/app-ios-unsigned.ipa",
+          "size": 10225145,
+          "minOSVersion": "15.0",
+          "sha256": "8e844bd62aca74f4ec54ab69b4b0f0e9bba1db2907f24444b7fee49d09f6034b"
+        },
+        {
+          "version": "1.12.0",
+          "buildVersion": "20",
+          "date": "2026-09-21T05:09:07Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.11.2...v1.12.0",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.12.0/app-ios-unsigned.ipa",
+          "size": 10225082,
+          "minOSVersion": "15.0",
+          "sha256": "7c1a24b16272c530a76383b815847010bbaf182f18154667f52ad8e281aa0843"
+        },
+        {
+          "version": "1.11.2",
+          "buildVersion": "19",
+          "date": "2026-09-12T09:14:40Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.11.1...v1.11.2",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.11.2/app-ios-unsigned.ipa",
+          "size": 10216483,
+          "minOSVersion": "15.0",
+          "sha256": "0ec0faf04bb05e3ab6fceb3124d7ce58777a97e1bdb72ec974bbd91d248a1698"
+        },
+        {
+          "version": "1.11.1",
+          "buildVersion": "18",
+          "date": "2026-09-08T17:06:24Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.11.0...v1.11.1",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.11.1/app-ios-unsigned.ipa",
+          "size": 10215899,
+          "minOSVersion": "15.0",
+          "sha256": "4245fee28f35f3e630cbb50efbf027b3ba54af431deb1047b485d84127dd43d4"
+        },
+        {
+          "version": "1.11.0",
+          "buildVersion": "17",
+          "date": "2026-09-06T08:01:19Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.10.0...v1.11.0",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.11.0/app-ios-unsigned.ipa",
+          "size": 10206683,
+          "minOSVersion": "15.0",
+          "sha256": "f03bf6179004b8ec9b46027b7e943648c248f42d02726c7fc157f2b94c38dfff"
+        },
+        {
+          "version": "1.10.0",
+          "buildVersion": "16",
+          "date": "2026-09-05T16:03:22Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.9.0...v1.10.0",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.10.0/app-ios-unsigned.ipa",
+          "size": 10159649,
+          "minOSVersion": "15.0",
+          "sha256": "2f241051470d0811140a3bbd28851dea159aa305bf1aff5bf02b8e1b0f10f237"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "保存预览中的图片到相册。",
+          "NSPhotoLibraryUsageDescription": "开启「图片保存到专属目录」后，把图片存进「轻书架」相册。"
+        }
+      }
+    },
+    {
+      "name": "Wild",
+      "bundleIdentifier": "opensource.wild",
+      "developerName": "niuhuan",
+      "subtitle": "轻小说文库第三方客户端",
+      "localizedDescription": "轻小说文库（wenku8）第三方客户端，支持 iOS、Android 与桌面平台。提供书架分卷、在线阅读与下载缓存，支持多语言界面，使用 Material Design 3 风格。\n\n配套仓库：https://github.com/niuhuan/wild",
+      "iconURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/icons/wild.png",
+      "tintColor": "#9E1B34",
+      "category": "lifestyle",
+      "screenshots": {
+        "iphone": [
+          {
+            "imageURL": "https://raw.githubusercontent.com/niuhuan/wild/main/images/IMG_01.PNG",
+            "width": 1179,
+            "height": 2556
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/niuhuan/wild/main/images/IMG_02.PNG",
+            "width": 1179,
+            "height": 2556
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/niuhuan/wild/main/images/IMG_03.PNG",
+            "width": 1179,
+            "height": 2556
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/niuhuan/wild/main/images/IMG_04.PNG",
+            "width": 1179,
+            "height": 2556
+          }
+        ],
+        "ipad": []
+      },
+      "versions": [
+        {
+          "version": "0.0.15",
+          "buildVersion": "15",
+          "date": "2026-09-28T09:04:25Z",
+          "localizedDescription": "## What's Changed\n* Fix/search 403 and volume collapse by @Maffile-Enky in https://github.com/niuhuan/wild/pull/24\n\n## New Contributors\n* @Maffile-Enky made their first contribution in https://github.com/niuhuan/wild/pull/24\n\n**Full Changelog**: https://github.com/niuhuan/wild/compare/v0.0.14...v0.0.15",
+          "downloadURL": "https://github.com/niuhuan/wild/releases/download/v0.0.15/wild-v0.0.15-ios-nosign.ipa",
+          "size": 22251729,
+          "minOSVersion": "13.0",
+          "sha256": "643a1b531f7396cc338e115754767c982284b558daf856c79e2d0aaa180f54a8"
+        },
+        {
+          "version": "0.0.14",
+          "buildVersion": "14",
+          "date": "2026-03-12T20:39:11Z",
+          "localizedDescription": "## What's Changed\n* Feature/ios cloudflare bypass volume fix by @aluo96078 in https://github.com/niuhuan/wild/pull/20\n\n## New Contributors\n* @aluo96078 made their first contribution in https://github.com/niuhuan/wild/pull/20\n\n**Full Changelog**: https://github.com/niuhuan/wild/compare/v0.0.12...v0.0.14",
+          "downloadURL": "https://github.com/niuhuan/wild/releases/download/v0.0.14/wild-v0.0.14-ios-nosign.ipa",
+          "size": 22683729,
+          "minOSVersion": "13.0",
+          "sha256": "44e0cae8c3aabf779269087a64d13e8a96a00e65029b933480406b8dec926604"
+        },
+        {
+          "version": "0.0.13",
+          "buildVersion": "13",
+          "date": "2026-01-03T23:58:30Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/niuhuan/wild/compare/v0.0.12...v0.0.13\n\n不能用了",
+          "downloadURL": "https://github.com/niuhuan/wild/releases/download/v0.0.13/wild-v0.0.13-ios-nosign.ipa",
+          "size": 37963381,
+          "minOSVersion": "12.0",
+          "sha256": "89725203ec3811d57549234bed2f5c39e7c4c46cf3a22cc91e3f310c19c9e7da"
+        },
+        {
+          "version": "0.0.12",
+          "buildVersion": "12",
+          "date": "2025-09-17T10:19:43Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/niuhuan/wild/compare/v0.0.11...v0.0.12",
+          "downloadURL": "https://github.com/niuhuan/wild/releases/download/v0.0.12/wild-v0.0.12-ios-nosign.ipa",
+          "size": 38190359,
+          "minOSVersion": "12.0",
+          "sha256": "6adc66de7dfb07f2483d6f8fe8472308ce19747f3e4841ba9cfe590229568e8c"
+        },
+        {
+          "version": "0.0.10",
+          "buildVersion": "10",
+          "date": "2025-06-16T10:28:43Z",
+          "localizedDescription": "403了 ～修复中\n\n**Full Changelog**: https://github.com/niuhuan/wild/compare/v0.0.9...v0.0.10\n\n显示不出来验证码、接口403等问题。请把VPN关了。\n\n- 2025-09-15 v0.0.10-fix2 增加了API host选项\n- 2025-08-22 v0.0.10-fix1 修复了验证码不显示问题\n\nv0.0.10\n- [x] ✨ 显示评论列表\n- [x] ✨ 详情页点击标签直接进入分类页面\n- [x] ✨ 长按删除单条历史记录\n- [x] ✨ 显示书架容量\n- [x] ✨ HTML阅读器自动滚屏\n- [x] ♻️ 优化HTML阅读器的性能（尝试解决卡顿）\n- [x] 🐛 修复退出登录\n\n加群/频道点这里 https://github.com/niuhuan/crops/releases\n\n### 仓库一览\n\n  | 限制级 | 项目 | URL |\n  | --- | --- | --- |\n  | R18 | 哔佧漫画 | [pikapika](https://github.com/ComicSparks/pikapika) |\n  | R18 | 禁漫天堂| [jasmine](https://github.com/ComicSparks/jasmine) |\n  | R18 | 绅氏漫画 | [wax](https://github.com/ComicSparks/wax) |\n  | R18 | nhentai | [nhentai](https://github.com/ComicSparks/nhentai-cross) |\n  | R18/Option | PIXIV | [pansy](https://github.com/niuhuan/pansy) |\n  | PG12 | 文库8 | [wild](https://github.com/niuhuan/wild) |",
+          "downloadURL": "https://github.com/niuhuan/wild/releases/download/v0.0.10/wild-v0.0.10-ios-nosign.ipa",
+          "size": 38135416,
+          "minOSVersion": "12.0",
+          "sha256": "c14f8d932b92af7734bc56fc50990dbc460586259d44959c226401eb7f1c37db"
+        },
+        {
+          "version": "0.0.9",
+          "buildVersion": "9",
+          "date": "2025-06-03T06:00:44Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/niuhuan/wild/compare/v0.0.8...v0.0.9\n\nv0.0.9\n\n- [x] 🐛 随机UA，回复APP使用\n- [x] ✨ 增加顶部间距, 底部间距的设置功能\n- [x] ✨ 滚动的阅读器类型(在设置中切换)",
+          "downloadURL": "https://github.com/niuhuan/wild/releases/download/v0.0.9/wild-v0.0.9-ios-nosign.ipa",
+          "size": 37486585,
+          "minOSVersion": "12.0",
+          "sha256": "6fb55fc73f4b9b436330ee5fe2c912a3fc650bef991fd88fb0f9ba348567771b"
+        },
+        {
+          "version": "0.0.8",
+          "buildVersion": "8",
+          "date": "2025-05-29T03:09:32Z",
+          "localizedDescription": "文库8 轻小说 客户端 支持 ios / macos / linux / android / windows\n\n**Full Changelog**: https://github.com/niuhuan/wild/compare/v0.0.7...v0.0.8\n\n- [x] ♻️ 修复首页\n- [x] ♻️ 各种出错弹窗全部删除，改成在页面中显示\n- [x] ✨ 下载失败的内容可以重新下载",
+          "downloadURL": "https://github.com/niuhuan/wild/releases/download/v0.0.8/wild-v0.0.8-ios-nosign.ipa",
+          "size": 37454470,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "0.0.7",
+          "buildVersion": "7",
+          "date": "2025-05-24T11:31:57Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/niuhuan/wild/compare/v0.0.6...v0.0.7\n\nv0.0.7\n\n- 可以缓存一定时间网络请求\n- 下载到本地观看\n\nv0.0.6\n\n解析已经下架的小说\n\nv0.0.5\n\n自动签到\n继续阅读(按页数)\n更新flutter引擎(flutter3.29.0在安卓bug居多,例如后台之后字体乱码, 现在更新成3.29.3, 如果仍然有BUG请提出issue, 以便继续跟进)\n\nhttps://github.com/flutter/flutter/issues/163730\nhttps://github.com/Predidit/Kazumi/issues/772",
+          "downloadURL": "https://github.com/niuhuan/wild/releases/download/v0.0.7/wild-v0.0.7-ios-nosign.ipa",
+          "size": 37364135,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "0.0.6",
+          "buildVersion": "6",
+          "date": "2025-05-17T14:05:58Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/niuhuan/wild/compare/v0.0.5...v0.0.6",
+          "downloadURL": "https://github.com/niuhuan/wild/releases/download/v0.0.6/wild-v0.0.6-ios-nosign.ipa",
+          "size": 36996765,
+          "minOSVersion": "12.0"
+        },
+        {
+          "version": "0.0.5",
+          "buildVersion": "5",
+          "date": "2025-05-17T03:49:57Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/niuhuan/wild/compare/v0.0.4...v0.0.5",
+          "downloadURL": "https://github.com/niuhuan/wild/releases/download/v0.0.5/wild-v0.0.5-ios-nosign.ipa",
+          "size": 36997942,
+          "minOSVersion": "12.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSPhotoLibraryUsageDescription": "用于把书内插图保存到相册。"
+        }
+      }
+    },
+    {
+      "name": "Yomiru",
+      "bundleIdentifier": "moe.yutro.yomiru",
+      "developerName": "hesitation-snow",
+      "subtitle": "轻之国度第三方客户端",
+      "localizedDescription": "使用 Flutter 开发的轻之国度第三方客户端，集小说阅读、书架管理与社区交流于一体。支持滚动与翻页阅读、正文缓存、简繁体切换，适配深色模式、平板与大屏设备。\n\n配套仓库：https://github.com/hesitation-snow/Yomiru",
+      "iconURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/icons/yomiru.png",
+      "tintColor": "#7A5FC0",
+      "category": "lifestyle",
+      "screenshots": {
+        "iphone": [
+          {
+            "imageURL": "https://raw.githubusercontent.com/hesitation-snow/Yomiru/main/assets/screenshot1.jpg",
+            "width": 1170,
+            "height": 2532
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/hesitation-snow/Yomiru/main/assets/screenshot2.jpg",
+            "width": 1170,
+            "height": 2532
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/hesitation-snow/Yomiru/main/assets/screenshot3.jpg",
+            "width": 1170,
+            "height": 2532
+          }
+        ],
+        "ipad": []
+      },
+      "versions": [
+        {
+          "version": "1.6.0",
+          "buildVersion": "14",
+          "date": "2026-10-28T10:30:05Z",
+          "localizedDescription": "# Yomiru v1.6.0\n\n本次更新重点聚焦界面自适应与阅读体验，带来网络诊断工具、悬浮底栏更新、主题配色扩充及阅读指示器自定义等等。",
+          "downloadURL": "https://github.com/hesitation-snow/Yomiru/releases/download/v1.6.0/yomiru-ios-1.6.0-unsigned.ipa",
+          "size": 15070876,
+          "minOSVersion": "15.0",
+          "sha256": "210badee6f3eb1b285f976c897069e46bf968bf0ea02d67bec20eb139d6401a8"
+        },
+        {
+          "version": "1.5.1",
+          "buildVersion": "13",
+          "date": "2026-10-13T04:00:30Z",
+          "localizedDescription": "## Yomiru v1.5.1\n\n本次更新主要优化阅读器设置与排版稳定性，增强插画查看体验。\n\n### 阅读体验\n\n- 重新整理阅读器设置，采用分组卡片与横向配色选择，排版选项直接展示，操作更直观。\n- 新增「加粗」选项，仅调整阅读正文，不改变应用界面字体。\n- 新增自定义文字颜色，支持取色面板和十六进制颜色输入。\n- 修复同时开启「首行缩进」和「两端对齐」时，部分段落缩进失效的问题。\n- 阅读器系统返回增加连续两次返回确认，减少误退出。\n\n### 动态与界面\n\n- 更新动态列表的加载数据源，另提供旧版加载方式作为兼容选项。\n- 修复部分安卓设备上评论出现持续高亮、像被鼠标悬停选中的问题。\n- 修复书籍网格卡片底部溢出，改善大字体及不同列数下的排版。\n- 统一书籍字数信息的右侧对齐，优化标签与字数的空间分配。",
+          "downloadURL": "https://github.com/hesitation-snow/Yomiru/releases/download/v1.5.1/yomiru-ios-v1.5.1-unsigned.ipa",
+          "size": 14869651,
+          "minOSVersion": "15.0",
+          "sha256": "0ae736c0b33114cff2a33b73ffdd524592884b20a0714ebf669029d12c8c2185"
+        },
+        {
+          "version": "1.5.0",
+          "buildVersion": "12",
+          "date": "2026-09-24T10:31:00Z",
+          "localizedDescription": "## Yomiru v1.5.0\n\n本次更新主要带来全新的首页浏览体验、更丰富的阅读排版，以及书籍下载功能。\n\n### 首页与书架\n\n- 重新设计首页，新增「最近更新」，调整分类与内容展示。\n- 新增「网格列数」设置，按喜好调整首页与书架的封面大小和每行书籍数量。\n- 优化封面比例、卡片间距和书架刷新体验，减少封面裁切与多余留白。\n\n### 阅读体验\n\n- 新增「原文格式」选项：如原文支持，可显示文字样式、标题、列表、引用等格式。\n- 重新设计排版设置，支持行间距、段落间距、字符间距、词间距、首行缩进、页边留白和两端对齐。\n- 翻页模式新增自动、单栏和双栏布局，方便大屏设备阅读。\n- 调整脚注上标的字体测量、占位和定位，改善系统粗体、大字号与窄屏换行时的显示。\n\n### 书籍导出\n\n- 新增「书籍导出」，请登录后在设置内手动启用。\n- 导出内容请仅用于个人离线阅读，并遵守作品授权与站点规则。\n\n### 界面优化\n\n- 统一主要页面的背景与卡片配色，改善动态中的书籍卡片、深色模式简介文字和用户主页勋章布局。\n\n感谢大家的使用！中秋快乐~",
+          "downloadURL": "https://github.com/hesitation-snow/Yomiru/releases/download/v1.5.0/yomiru-ios-v1.5.0-unsigned.ipa",
+          "size": 14839983,
+          "minOSVersion": "15.0",
+          "sha256": "1998178bb77ade4f5f69776a2cf28011ba085c8d8ac440b4d9631b5e7356cd9e"
+        },
+        {
+          "version": "1.4.0",
+          "buildVersion": "11",
+          "date": "2026-09-14T06:20:35Z",
+          "localizedDescription": "## Yomiru v1.4.0\n\n- 新增音量键翻页，仅 Android 支持。\n- 新增「关闭动画」选项，减少界面过渡动效。\n- 新增「流量节省模式」，关闭所有图片自动加载，阅读插画可按需点击加载。\n- 新增「封面模糊」选项，支持模糊全部书籍封面或仅勇者书籍封面。\n- 新增「横屏适配」开关，平板、折叠屏也可使用横屏布局。\n- 优化插画缓存与复用，减少切换章节、重新进入阅读器时的重复下载。\n- 修复切换章节后「隐藏系统状态栏」失效的问题。\n- 完善消息中心的已读处理。\n\n最后感谢大家的使用与反馈！",
+          "downloadURL": "https://github.com/hesitation-snow/Yomiru/releases/download/v1.4.0/yomiru-ios-v1.4.0-unsigned.ipa",
+          "size": 14328744,
+          "minOSVersion": "15.0",
+          "sha256": "8e23568a62487efcffc59c431ceb12453f3554a09d8d14743392364cfdba5696"
+        },
+        {
+          "version": "1.3.0",
+          "buildVersion": "10",
+          "date": "2026-09-02T18:59:49Z",
+          "localizedDescription": "## Yomiru v1.3.0\n\n- 首页、书架、动态、搜索、书籍详情和用户主页的加载速度进一步提升。\n- 优化书架状态、关注状态与用户信息同步。\n- 优化阅读器章节分页与加载体验。\n- dian putong yonghu.",
+          "downloadURL": "https://github.com/hesitation-snow/Yomiru/releases/download/v1.3.0/yomiru-ios-v1.3.0-unsigned.ipa",
+          "size": 14222495,
+          "minOSVersion": "15.0",
+          "sha256": "966ed5e12e5bdd68f2c3950db017807fec0eb212063092058de6ea4436aa94c7"
+        },
+        {
+          "version": "1.2.0",
+          "buildVersion": "8",
+          "date": "2026-08-24T06:23:30Z",
+          "localizedDescription": "## Yomiru v1.2.0\n\n本次版本主要完善了应用的阅读和用户资料体验，优化应用访问速度。\n\n### 更新内容\n\n- 优化用户主页、评论区、任务中心及勋章相关功能。\n- 优化大屏设备适配。\n- 减少大量重复网络请求。\n\n> 实际加载速度仍会受到网络环境和服务器响应速度影响。\n> IPA 请自签安装。",
+          "downloadURL": "https://github.com/hesitation-snow/Yomiru/releases/download/v1.2.0/yomiru-ios-v1.2.0-unsigned.ipa",
+          "size": 13617634,
+          "minOSVersion": "15.0",
+          "sha256": "bdd90428428ecd598bc0f5c55ecd5873936febafd5bc3a5932eb32ada4e78f2d"
+        },
+        {
+          "version": "1.1.0",
+          "buildVersion": "7",
+          "date": "2026-08-22T06:28:15Z",
+          "localizedDescription": "",
+          "downloadURL": "https://github.com/hesitation-snow/Yomiru/releases/download/v1.1.0/yomiru-ios-v1.1.0-unsigned.ipa",
+          "size": 13554908,
+          "minOSVersion": "15.0",
+          "sha256": "a474b01e2ee8a63ff2c2b61e54f2b19ec537fa409ee5fc72508aa7a6d0a54a3b"
+        },
+        {
+          "version": "1.0.5",
+          "buildVersion": "6",
+          "date": "2026-08-19T16:47:17Z",
+          "localizedDescription": "## Yomiru 1.0.5\n\n### 更新内容\n\n- 优化阅读器分享功能，修复 iPadOS 分享面板无法正常弹出或位置异常的问题。\n- 优化大屏幕设备上的阅读布局与界面适配。\n- 优化应用稳定性与部分阅读体验。\n\n iOS：IPA 请自签安装。",
+          "downloadURL": "https://github.com/hesitation-snow/Yomiru/releases/download/v1.0.5/yomiru-ios-v1.0.5-unsigned.ipa",
+          "size": 11809751,
+          "minOSVersion": "15.0",
+          "sha256": "99bc7b169dfe2328209fa395a0984bd3584ff29ae47cda3490dba7aa7715cd97"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "用于将动态和评论图片保存到相册。",
+          "NSPhotoLibraryUsageDescription": "用于选择并上传动态和评论图片。"
+        }
+      }
+    },
+    {
+      "name": "LightNovelReader",
+      "bundleIdentifier": "com.komorebiiluv.LightNovelReader",
+      "developerName": "komorebiiluvu",
+      "subtitle": "iOS 轻小说阅读器",
+      "localizedDescription": "基于 SwiftUI 与 Kotlin Multiplatform 的 iOS 轻小说阅读器，支持 iPhone 与 iPad。提供真实书源、卷曲翻页与滚动阅读、多书架管理、整本离线缓存、EPUB / TXT 导出与阅读统计。\n\n配套仓库：https://github.com/komorebiiluvu/LightNovelReader-For-IOS",
+      "iconURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/icons/lightnovelreader.png",
+      "tintColor": "#6E5BB0",
+      "category": "lifestyle",
+      "screenshots": {
+        "iphone": [],
+        "ipad": [
+          {
+            "imageURL": "https://raw.githubusercontent.com/komorebiiluvu/LightNovelReader-For-IOS/main/assets/screenshots/01.png",
+            "width": 1536,
+            "height": 2048
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/komorebiiluvu/LightNovelReader-For-IOS/main/assets/screenshots/02.png",
+            "width": 1536,
+            "height": 2048
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/komorebiiluvu/LightNovelReader-For-IOS/main/assets/screenshots/03.png",
+            "width": 1536,
+            "height": 2048
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/komorebiiluvu/LightNovelReader-For-IOS/main/assets/screenshots/04.png",
+            "width": 1536,
+            "height": 2048
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/komorebiiluvu/LightNovelReader-For-IOS/main/assets/screenshots/05.png",
+            "width": 1536,
+            "height": 2048
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/komorebiiluvu/LightNovelReader-For-IOS/main/assets/screenshots/06.png",
+            "width": 1536,
+            "height": 2048
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/komorebiiluvu/LightNovelReader-For-IOS/main/assets/screenshots/07.png",
+            "width": 1536,
+            "height": 2048
+          }
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.1.5",
+          "buildVersion": "6",
+          "date": "2026-09-03T18:23:15Z",
+          "localizedDescription": "# LightNovelReader for iOS v1.1.5\n\n本版本集中改善探索页连续分页与大量封面加载时的滚动性能，增强拟真翻页和滚动阅读的稳定性，并更新新用户默认阅读配置。当前版本为 **1.1.5（Build 6）**。\n\n## 新增\n\n- 滚动阅读模式支持在章末再次上滑进入下一章，兼容不足一屏的短章节，并避免惯性滚动误触。\n\n## 优化\n\n- 探索「查看全部」支持稳定连续分页；采用等高书卡布局，修复分页跳动、行间吸附、书名与作者排版不齐，并恢复封面圆角。\n- 重构封面加载管线：按需加载、离屏取消、可见项优先、网络与解码分别限流，并分散图片上屏时机，降低快速滑动掉帧。\n- 分页去重改为增量维护，减少主线程扫描与无关状态持久化。\n- 目录请求合并，启动更新检查、缓存清理等任务移至后台，降低启动阻塞与重复请求。\n- 封面和离线插图缓存使用稳定 SHA-256 键并兼容旧缓存迁移；内存缓存改为真正的 LRU。\n- 新用户默认阅读配置调整为楷体、常规、22pt、行距 8、左右边距 35pt、上边距 72pt、下边距 24pt、拟真翻页。\n\n## 修复\n\n- 修复拟真翻页左右点按、反向翻页及跨章节操作中的多类闪退；统一为更稳定的单面正文页模型。\n- 修复隐藏阅读页工具栏后正文位移和底部空白带。\n- 修复滚动模式章末提示出现但无法触发下一章的问题。\n- 修复系统启动画面与 App 内启动页衔接时的 Logo 和文字跳动。\n- 统一强调色回退与版本显示，并改进分页、缓存、翻页和跨章节操作的回归测试。\n\n## 已知问题\n\n- 深色阅读背景下，UIKit 系统生成的拟真翻页纸背仍可能偏浅灰；本版优先保证滑动、点按及跨章节翻页稳定。\n\n## 附件\n\n- **IPA**（未签名，需自行签名后安装；支持 iPhone/iPad，iOS 16+）\n- **完整源码 ZIP**（包含真机与模拟器两套 SharedKit）",
+          "downloadURL": "https://github.com/komorebiiluvu/LightNovelReader-For-IOS/releases/download/v1.1.5/LightNovelReader-v1.1.5-unsigned.ipa",
+          "size": 37239339,
+          "minOSVersion": "16.0",
+          "sha256": "5833b4309278038472b72f925f17c6f2092c4fc38f60a24851dadc34a26d97f4"
+        },
+        {
+          "version": "1.0.0",
+          "buildVersion": "1",
+          "date": "2026-08-24T21:29:22Z",
+          "localizedDescription": "# LightNovelReader for iOS v1.1.0\n\nKMP 数据互通层正式版。数据层从纯 Swift 迁移到 Kotlin Multiplatform，与上游 Android 版同源。\n\n## 新增\n- **KMP 数据层（SharedKit）**：模型/抓取器与上游 `:api` 对齐，书 ID、组件 JSON 格式一致。与上游项目共用同一套数据层，解析逻辑经上游长期迭代验证更稳定、不易出错；上游修复可快速同步，出现问题也便于与上游比对、快速定位\n- **探索页对齐上游**：6 大栏目（轻小说列表/热门/动画化/今日更新/新书一览/完结全本）、首页推荐、48 标签\n- **崩溃报告导出**：设置页可导出崩溃日志\n- **开屏页面加入花体「for ios」后缀**：与上游项目 LightNovelReader 作出区分\n- **设置页「特别鸣谢」置顶**：注明本应用为上游 LightNovelReader 的 iOS 移植版\n- **修复 iPad 旋转布局不刷新**：探索页封面/书架/列表页网格在横竖屏切换时立即按新宽度重排\n- **性能优化**：封面下采样移后台（滚动不再主线程解码掉帧）、滚动模式正文惰性渲染（长章进入更流畅）、EPUB/TXT 导出移后台（大书导出不冻结界面）、KMP 协程/Ktor 客户端生命周期收口\n\n## 修复\n- GBK 解码表完整化：修复中文书名/作者乱码\n- 详情页字段 DOM 定位：作者/状态/文库/简介不再一长串、不再显示\"插图\"\n- 正文 `<br>` 分段\n- 阅读/缓存全书闪退（JsonObject 桥接 + 强解包安全化）\n- 阅读设置即时生效（背景/字体/边距无需翻页）\n- 药丸/最近阅读精简为「作者 · 连载状态」\n\n## 附件\n- **IPA**（未签名，需自签安装，支持 iPhone/iPad，iOS 16+）\n- **完整源码 zip**\n\n## 文档\n- `SYNC.md`：上游同步手册\n- `docs/KMP-TROUBLESHOOTING.md`：KMP 排错手册\n- `CHANGELOG.md`：版本变更记录",
+          "downloadURL": "https://github.com/komorebiiluvu/LightNovelReader-For-IOS/releases/download/v1.1.0/LightNovelReader-v1.1.0-fixed.ipa",
+          "size": 37140707,
+          "minOSVersion": "16.0",
+          "sha256": "18cc4a36dbcfd129fb232198b1403c4ec54fbc095e7c47fbcea5ac801d77d6dc"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    }
+  ],
+  "news": []
+}
