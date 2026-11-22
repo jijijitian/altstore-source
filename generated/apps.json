@@ -210,6 +210,16 @@
       },
       "versions": [
         {
+          "version": "2.4.6",
+          "buildVersion": "20406",
+          "date": "2026-11-22T05:42:23Z",
+          "localizedDescription": "- 修复 Bangumi 同步无法使用的问题",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.6/Kazumi_ios_2.4.6_no_sign.ipa",
+          "size": 30369553,
+          "minOSVersion": "15.0",
+          "sha256": "11f56776543e9c7ce65704c649311f3af77916da8b3de9d3f32cb48971d5b641"
+        },
+        {
           "version": "2.4.5",
           "buildVersion": "20405",
           "date": "2026-11-21T05:56:21Z",
@@ -298,16 +308,6 @@
           "size": 30538813,
           "minOSVersion": "15.0",
           "sha256": "55ebb9df75db399c57dce431397d19258204a31625ca347e8d859992be42f212"
-        },
-        {
-          "version": "2.3.6",
-          "buildVersion": "20306",
-          "date": "2026-09-23T11:56:14Z",
-          "localizedDescription": "- 修复部分地区图片资源无法加载的问题 (#2581)\n> [!NOTE]\n> 这是 2.3.4 的热修复版本，更多更新日志参考 2.3.4",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.6/Kazumi_ios_2.3.6_no_sign.ipa",
-          "size": 30406530,
-          "minOSVersion": "15.0",
-          "sha256": "77e0eb85a3bc3047b59809b491653091999fa6713bdf35684e59f776a51b9212"
         }
       ],
       "appPermissions": {
