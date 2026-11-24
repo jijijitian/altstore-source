@@ -964,6 +964,26 @@
       },
       "versions": [
         {
+          "version": "1.6.3",
+          "buildVersion": "283",
+          "date": "2026-11-24T09:57:30Z",
+          "localizedDescription": "## 1.6.3\n\n**变更**\n\n- 「设置」改为「我的」：页面顶部显示当前账号与书架概况，原有的设置项移入其中的「设置」入口\n- 新增账号页：显示文库账号的用户 ID、等级、头衔、注册日期等信息，下拉可刷新\n- 阅读进度独立成页，按最近阅读时间排列，从「我的」进入\n- 离线缓存、元数据缓存、账号与各处设置页面统一为液态玻璃卡片，行距与留白一致\n- 多选时的底部操作条改为悬浮卡片\n\n**修复**\n\n- 修复从缓存列表、阅读进度或账号页打开书籍后，返回时跳过了原页面\n- 修复已收藏的数量显示为 0\n- 修复元数据缓存的书籍无法展开\n- 修复展开分卷后的内容与相邻条目挤在一起\n- 修复缓存页条目贴住卡片边缘\n- 修复离线缓存页点击展开箭头会进入书籍\n- 修复设置页分组标题错位\n- 修复设置页文字显示为蓝色",
+          "downloadURL": "https://gh-proxy.org/https://github.com/jijijitian/light-novel-library_Wenku8_iOS/releases/download/v1.6.3/Wenku8-1.6.3-unsigned.ipa",
+          "size": 7548913,
+          "minOSVersion": "17.0",
+          "sha256": "0cd71293eaf42cda1f9146f54cc59506edaaab8b6bbfde9b35b58d24b39107ca"
+        },
+        {
+          "version": "1.6.2",
+          "buildVersion": "227",
+          "date": "2026-11-24T06:47:39Z",
+          "localizedDescription": "## 1.6.2\n\n**变更**\n\n- 离线缓存与元数据缓存支持多选：右上角菜单中选择「选择」，勾选后可一次删除\n- 离线缓存中选中书目即选中该书所有已下载分卷，也可单独勾选分卷\n- 元数据缓存仅「其他缓存」中的书籍可勾选，书架与已下载书籍保留\n- 阅读配色区分亮色与暗色：两套外观各自记住自己的选择，暗色模式下夜间配色排在首位\n\n**修复**\n\n- 修复删除书籍时列表向上跳动\n- 修复元数据缓存与离线缓存的展开动画不连贯\n- 修复从离线缓存或元数据缓存打开书籍后，返回时回到了设置页\n- 修复受限书籍的插图章节在下载过程中显示为未缓存\n- 修复离线缓存中展开的卷名与书名未对齐\n- 修复元数据缓存页只能左滑删除的问题",
+          "downloadURL": "https://gh-proxy.org/https://github.com/jijijitian/light-novel-library_Wenku8_iOS/releases/download/v1.6.2/Wenku8-1.6.2-unsigned.ipa",
+          "size": 7462275,
+          "minOSVersion": "17.0",
+          "sha256": "7c80aa00d8cba2d1fcb87fb22def98215b2c23f27df42c4c39424d4d5ad3d409"
+        },
+        {
           "version": "1.6.1",
           "buildVersion": "197",
           "date": "2026-11-24T04:23:46Z",
