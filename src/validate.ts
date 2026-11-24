@@ -28,6 +28,11 @@ const fail = (message: string) => errors.push(message)
 
 function httpUrl(value: unknown, label: string) {
   if (typeof value !== 'string' || !/^https?:\/\//.test(value)) fail(`${label} 必须是 HTTP(S) 链接`)
+  // 中转源形如 https://gh-proxy.org/https://github.com/...，内层地址也必须是 HTTP(S)。
+  const inner = value.replace(/^https?:\/\/[^/]+\//, '')
+  if (/^https?:\/\//.test(inner) && !/^https?:\/\/[^\s]+$/.test(inner)) {
+    fail(`${label} 的内层地址无效：${value}`)
+  }
 }
 
 function nonEmpty(value: unknown, label: string) {

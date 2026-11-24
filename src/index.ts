@@ -1,15 +1,13 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
-import { APPS, SOURCE, type AppConfig } from './config.ts'
+import { APPS, MIRROR_PREFIX, SOURCE, type AppConfig } from './config.ts'
 import { collectVersions, type ResolvedVersion } from './app.ts'
 import { probeIpa, type IpaMetadata } from './ipa.ts'
 import { validateSource } from './validate.ts'
 
 const ROOT = process.cwd()
-const OUTPUT = join(ROOT, SOURCE.file)
 const CACHE = join(ROOT, '.cache/ipa-metadata.json')
 const ASSETS = `https://raw.githubusercontent.com/${SOURCE.repo}/${SOURCE.branch}/assets`
-const SOURCE_URL = `https://raw.githubusercontent.com/${SOURCE.repo}/${SOURCE.branch}/${SOURCE.file}`
 
 const fresh = process.argv.includes('--fresh')
 const metadataCache = new Map<string, IpaMetadata>()
@@ -107,6 +105,25 @@ function dedupe(versions: ResolvedVersion[]): ResolvedVersion[] {
   })
 }
 
+interface Variant {
+  /** generated/ 下的文件名 */
+  file: string
+  /** 是否把图片与安装包链接改写成中转地址 */
+  mirror: boolean
+  identifierSuffix: string
+  nameSuffix: string
+}
+
+const VARIANTS: Variant[] = [
+  { file: 'apps.json', mirror: false, identifierSuffix: '', nameSuffix: '' },
+  {
+    file: 'apps-ghproxy.json',
+    mirror: true,
+    identifierSuffix: '.ghproxy',
+    nameSuffix: ' · 中转',
+  },
+]
+
 async function main() {
   await loadCache()
   log(`正在生成 ${SOURCE.name}：${APPS.length} 个应用`)
@@ -119,55 +136,81 @@ async function main() {
     })
   )
 
-  const apps = results.map(({ app, versions }) => ({
-    name: app.name,
-    bundleIdentifier: app.bundleIdentifier,
-    developerName: app.developerName,
-    subtitle: app.subtitle,
-    localizedDescription: app.description,
-    iconURL: `${ASSETS}/icons/${app.iconFile}`,
-    tintColor: app.tintColor,
-    category: app.category,
-    screenshots: app.screenshots,
-    versions: dedupe(versions).map((version) => ({
-      version: version.version,
-      buildVersion: version.buildVersion,
-      date: version.date,
-      localizedDescription: version.localizedDescription,
-      downloadURL: version.downloadURL,
-      size: version.size,
-      minOSVersion: version.minOSVersion,
-      ...(version.sha256 ? { sha256: version.sha256 } : {}),
-    })),
-    appPermissions: buildPermissions(app, versions),
-  }))
+  // 图片与安装包链接只在写盘时加前缀，探测始终访问原始地址。
+  const proxied = (url: string, mirror: boolean) => (mirror ? MIRROR_PREFIX + url : url)
 
-  const source = {
-    name: SOURCE.name,
-    identifier: SOURCE.identifier,
-    subtitle: SOURCE.subtitle,
-    description: SOURCE.description,
-    iconURL: `${ASSETS}/icon.png`,
-    headerURL: `${ASSETS}/header.png`,
-    sourceURL: SOURCE_URL,
-    website: `https://github.com/${SOURCE.repo}`,
-    tintColor: SOURCE.tintColor,
-    featuredApps: APPS.slice(0, 5).map((app) => app.bundleIdentifier),
-    apps,
-    news: [],
+  for (const variant of VARIANTS) {
+    const apps = results.map(({ app, versions }) => ({
+      name: app.name,
+      bundleIdentifier: app.bundleIdentifier,
+      developerName: app.developerName,
+      subtitle: app.subtitle,
+      localizedDescription: app.description,
+      iconURL: proxied(`${ASSETS}/icons/${app.iconFile}`, variant.mirror),
+      tintColor: app.tintColor,
+      category: app.category,
+      screenshots: {
+        iphone: app.screenshots.iphone.map((shot) => ({
+          ...shot,
+          imageURL: proxied(shot.imageURL, variant.mirror),
+        })),
+        ipad: app.screenshots.ipad.map((shot) => ({
+          ...shot,
+          imageURL: proxied(shot.imageURL, variant.mirror),
+        })),
+      },
+      versions: dedupe(versions).map((version) => ({
+        version: version.version,
+        buildVersion: version.buildVersion,
+        date: version.date,
+        localizedDescription: version.localizedDescription,
+        downloadURL: proxied(version.downloadURL, variant.mirror),
+        size: version.size,
+        minOSVersion: version.minOSVersion,
+        ...(version.sha256 ? { sha256: version.sha256 } : {}),
+      })),
+      appPermissions: buildPermissions(app, versions),
+    }))
+
+    const sourceFile = `generated/${variant.file}`
+    const sourceURL = proxied(
+      `https://raw.githubusercontent.com/${SOURCE.repo}/${SOURCE.branch}/${sourceFile}`,
+      variant.mirror
+    )
+
+    const source = {
+      name: SOURCE.name + variant.nameSuffix,
+      identifier: SOURCE.identifier + variant.identifierSuffix,
+      subtitle: variant.mirror ? '自用 AltStore / SideStore 软件源 · gh-proxy 中转' : SOURCE.subtitle,
+      description: variant.mirror
+        ? `${SOURCE.description}\n\n本源的图片与安装包均通过 ${MIRROR_PREFIX} 中转下载，适用于 GitHub 直连不稳定的网络环境。`
+        : SOURCE.description,
+      iconURL: proxied(`${ASSETS}/icon.png`, variant.mirror),
+      headerURL: proxied(`${ASSETS}/header.png`, variant.mirror),
+      sourceURL,
+      website: proxied(`https://github.com/${SOURCE.repo}`, variant.mirror),
+      tintColor: SOURCE.tintColor,
+      featuredApps: APPS.slice(0, 5).map((app) => app.bundleIdentifier),
+      apps,
+      news: [],
+    }
+
+    validateSource(source)
+    const output = join(ROOT, sourceFile)
+    await mkdir(dirname(output), { recursive: true })
+    await writeFile(output, `${JSON.stringify(source, null, 2)}\n`)
+
+    const total = apps.reduce((sum, app) => sum + app.versions.length, 0)
+    log(`\n已生成 ${output}：${apps.length} 个应用，共 ${total} 个版本`)
+    for (const app of apps) {
+      const latest = app.versions[0]
+      log(
+        `  ${app.name.padEnd(18)} ${latest.version} (${latest.buildVersion}) ${app.versions.length} 个版本`
+      )
+    }
   }
 
-  validateSource(source)
-  await mkdir(dirname(OUTPUT), { recursive: true })
-  await writeFile(OUTPUT, `${JSON.stringify(source, null, 2)}\n`)
   await saveCache()
-
-  const total = apps.reduce((sum, app) => sum + app.versions.length, 0)
-  log(`\n已生成 ${OUTPUT}：${apps.length} 个应用，共 ${total} 个版本`)
-  for (const app of apps) {
-    const latest = app.versions[0]
-    log(`  ${app.name.padEnd(18)} ${latest.version} (${latest.buildVersion}) ${app.versions.length} 个版本`)
-  }
 }
 
 await main()

@@ -266,6 +266,8 @@ export const APPS: AppConfig[] = [
   },
 ]
 
+export const MIRROR_PREFIX = 'https://gh-proxy.org/'
+
 export const SOURCE = {
   name: 'Altstore Source',
   identifier: 'io.github.jijijitian.altstore-source',
