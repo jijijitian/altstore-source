@@ -2,7 +2,7 @@
   "name": "Altstore Source",
   "identifier": "io.github.jijijitian.altstore-source",
   "subtitle": "自用 AltStore / SideStore 软件源",
-  "description": "个人自用的 AltStore / SideStore 软件源，收录以下开源项目的 iOS 版本：Animeko、Kazumi、Aidoku、轻书架、Wild、Yomiru、LightNovelReader。所有安装包均来自各项目 GitHub Releases 的未签名 IPA，由客户端使用本地证书签名后安装。\n\n配套仓库：\nhttps://github.com/open-ani/animeko\nhttps://github.com/Predidit/Kazumi\nhttps://github.com/LightNovelShelf/Flutter\nhttps://github.com/niuhuan/wild\nhttps://github.com/hesitation-snow/Yomiru\nhttps://github.com/Aidoku/Aidoku\nhttps://github.com/komorebiiluvu/LightNovelReader-For-IOS",
+  "description": "个人自用的 AltStore / SideStore 软件源，收录以下开源项目的 iOS 版本：Animeko、Kazumi、Aidoku、轻书架、Wild、Yomiru、LightNovelReader、轻小说文库。所有安装包均来自各项目 GitHub Releases 的未签名 IPA，由客户端使用本地证书签名后安装。\n\n配套仓库：\nhttps://github.com/open-ani/animeko\nhttps://github.com/Predidit/Kazumi\nhttps://github.com/LightNovelShelf/Flutter\nhttps://github.com/niuhuan/wild\nhttps://github.com/hesitation-snow/Yomiru\nhttps://github.com/Aidoku/Aidoku\nhttps://github.com/komorebiiluvu/LightNovelReader-For-IOS\nhttps://github.com/jijijitian/light-novel-library_Wenku8_iOS",
   "iconURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/icon.png",
   "headerURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/header.png",
   "sourceURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/generated/apps.json",
@@ -916,6 +916,82 @@
           "size": 37140707,
           "minOSVersion": "16.0",
           "sha256": "18cc4a36dbcfd129fb232198b1403c4ec54fbc095e7c47fbcea5ac801d77d6dc"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "轻小说文库",
+      "bundleIdentifier": "org.jijijitian.wenku8.ios",
+      "developerName": "jijijitian",
+      "subtitle": "轻小说文库 iOS 客户端",
+      "localizedDescription": "轻小说文库（wenku8.net）的第三方 iOS 客户端，使用 SwiftUI 编写，界面采用 iOS 26 起的液态玻璃风格。提供云端书架同步、整本与分卷离线下载、四种配色的阅读器，以及封面取色、iPad 横屏适配等细节。\n\n配套仓库：https://github.com/jijijitian/light-novel-library_Wenku8_iOS",
+      "iconURL": "https://raw.githubusercontent.com/jijijitian/altstore-source/main/assets/icons/wenku8.png",
+      "tintColor": "#4A66E0",
+      "category": "lifestyle",
+      "screenshots": {
+        "iphone": [
+          {
+            "imageURL": "https://raw.githubusercontent.com/jijijitian/light-novel-library_Wenku8_iOS/master/.readme/images/home.jpg",
+            "width": 603,
+            "height": 1311
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/jijijitian/light-novel-library_Wenku8_iOS/master/.readme/images/explore.jpg",
+            "width": 603,
+            "height": 1311
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/jijijitian/light-novel-library_Wenku8_iOS/master/.readme/images/detail.jpg",
+            "width": 603,
+            "height": 1311
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/jijijitian/light-novel-library_Wenku8_iOS/master/.readme/images/reader.jpg",
+            "width": 603,
+            "height": 1311
+          },
+          {
+            "imageURL": "https://raw.githubusercontent.com/jijijitian/light-novel-library_Wenku8_iOS/master/.readme/images/reviews.jpg",
+            "width": 603,
+            "height": 1311
+          }
+        ],
+        "ipad": []
+      },
+      "versions": [
+        {
+          "version": "1.6.1",
+          "buildVersion": "197",
+          "date": "2026-11-24T04:23:46Z",
+          "localizedDescription": "## 1.6.1\n\n**变更**\n\n- 下架作品的插图章节可以正常阅读，图片随后台下载自动保存到本机\n- 点击下架作品的任意章节会下载所在分卷，目录中该卷章节一并显示下载状态\n- 正文保存到本机后即可阅读，插图在后台下载，互不等待\n\n**修复**\n\n- 修复下架作品的插图章节标记为已缓存但打开是空白\n- 修复非下架作品的插图打开时仍要联网加载\n- 修复部分书目插图章节无法获取\n- 修复分卷下载只保存了第一章\n- 修复目录的下载标识与章节序号未对齐\n- 修复卷标题换行后第二行居中",
+          "downloadURL": "https://github.com/jijijitian/light-novel-library_Wenku8_iOS/releases/download/v1.6.1/Wenku8-1.6.1-unsigned.ipa",
+          "size": 7430003,
+          "minOSVersion": "17.0",
+          "sha256": "3d327a200da5d95b16ae398445697a047b4bae251d75277e3a4a911519fd42de"
+        },
+        {
+          "version": "1.6.0",
+          "buildVersion": "179",
+          "date": "2026-11-23T18:13:19Z",
+          "localizedDescription": "## 1.6.0\n\n**变更**\n\n- 新增阅读因版权问题下架的作品：目录仍可浏览，阅读时自动下载所在分卷并保存在本机\n- 下架作品的目录、分卷与章节划分与网页版一致，插图章节能正常显示\n- 目录中的章节增加序号并拉开层次，当前阅读的章节有高亮\n\n**修复**\n\n- 修复搜索没有结果时报错\n- 修复域名跳转导致搜索不到任何内容\n- 修复部分书目无法打开目录（编号小于 1000 的作品）\n- 修复非下架作品阅读时出现下载提示\n- 修复已缓存章节的标题与正文错位，重读一次即可自动纠正\n- 修复上下滑动模式切换章节后停在末尾",
+          "downloadURL": "https://github.com/jijijitian/light-novel-library_Wenku8_iOS/releases/download/v1.6.0/Wenku8-1.6.0-unsigned.ipa",
+          "size": 7392406,
+          "minOSVersion": "17.0",
+          "sha256": "349b7dbd15aba5ecea5434bc4f08f50d0284dc92a49e4d8f531979b49c302a87"
+        },
+        {
+          "version": "1.5.0",
+          "buildVersion": "145",
+          "date": "2026-11-22T22:09:30Z",
+          "localizedDescription": "## 1.5.0\n\n**变更**\n\n- 数据来源设置改为站点域名选择，并保留连接检测\n- 全部内容直接读取文库网页版，账号、书架与阅读进度不受影响\n- 排行榜、标签页与站点首页的推荐板块需要登录文库账号后显示\n\n**修复**\n\n- 修复从设置返回首页后部分板块空白",
+          "downloadURL": "https://github.com/jijijitian/light-novel-library_Wenku8_iOS/releases/download/v1.5.0/Wenku8-1.5.0-unsigned.ipa",
+          "size": 7323439,
+          "minOSVersion": "17.0",
+          "sha256": "2835dc201d24bd11c43de9abd3e7fc042d53ef6b3b90b0f18845cb2a491a978a"
         }
       ],
       "appPermissions": {

@@ -236,6 +236,34 @@ export const APPS: AppConfig[] = [
     privacy: {},
     maxVersions: 10,
   },
+  {
+    key: 'wenku8',
+    repo: 'jijijitian/light-novel-library_Wenku8_iOS',
+    name: '轻小说文库',
+    bundleIdentifier: 'org.jijijitian.wenku8.ios',
+    developerName: 'jijijitian',
+    subtitle: '轻小说文库 iOS 客户端',
+    description:
+      '轻小说文库（wenku8.net）的第三方 iOS 客户端，使用 SwiftUI 编写，界面采用 iOS 26 起的液态玻璃风格。提供云端书架同步、整本与分卷离线下载、四种配色的阅读器，以及封面取色、iPad 横屏适配等细节。\n\n配套仓库：https://github.com/jijijitian/light-novel-library_Wenku8_iOS',
+    iconFile: 'wenku8.png',
+    tintColor: '#4A66E0',
+    category: 'lifestyle',
+    screenshots: {
+      iphone: ['home', 'explore', 'detail', 'reader', 'reviews'].map((name) => ({
+        imageURL: raw(
+          'jijijitian/light-novel-library_Wenku8_iOS',
+          'master',
+          `.readme/images/${name}.jpg`
+        ),
+        width: 603,
+        height: 1311,
+      })),
+      ipad: [],
+    },
+    entitlements: [],
+    privacy: {},
+    maxVersions: 10,
+  },
 ]
 
 export const SOURCE = {
@@ -243,7 +271,7 @@ export const SOURCE = {
   identifier: 'io.github.jijijitian.altstore-source',
   subtitle: '自用 AltStore / SideStore 软件源',
   description:
-    '个人自用的 AltStore / SideStore 软件源，收录以下开源项目的 iOS 版本：Animeko、Kazumi、Aidoku、轻书架、Wild、Yomiru、LightNovelReader。所有安装包均来自各项目 GitHub Releases 的未签名 IPA，由客户端使用本地证书签名后安装。\n\n配套仓库：\nhttps://github.com/open-ani/animeko\nhttps://github.com/Predidit/Kazumi\nhttps://github.com/LightNovelShelf/Flutter\nhttps://github.com/niuhuan/wild\nhttps://github.com/hesitation-snow/Yomiru\nhttps://github.com/Aidoku/Aidoku\nhttps://github.com/komorebiiluvu/LightNovelReader-For-IOS',
+    '个人自用的 AltStore / SideStore 软件源，收录以下开源项目的 iOS 版本：Animeko、Kazumi、Aidoku、轻书架、Wild、Yomiru、LightNovelReader、轻小说文库。所有安装包均来自各项目 GitHub Releases 的未签名 IPA，由客户端使用本地证书签名后安装。\n\n配套仓库：\nhttps://github.com/open-ani/animeko\nhttps://github.com/Predidit/Kazumi\nhttps://github.com/LightNovelShelf/Flutter\nhttps://github.com/niuhuan/wild\nhttps://github.com/hesitation-snow/Yomiru\nhttps://github.com/Aidoku/Aidoku\nhttps://github.com/komorebiiluvu/LightNovelReader-For-IOS\nhttps://github.com/jijijitian/light-novel-library_Wenku8_iOS',
   repo: 'jijijitian/altstore-source',
   branch: 'main',
   file: 'generated/apps.json',

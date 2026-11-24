@@ -11,6 +11,7 @@
 | Wild | [niuhuan/wild](https://github.com/niuhuan/wild) | 轻小说文库第三方客户端 |
 | Yomiru | [hesitation-snow/Yomiru](https://github.com/hesitation-snow/Yomiru) | 轻之国度第三方客户端 |
 | LightNovelReader | [komorebiiluvu/LightNovelReader-For-IOS](https://github.com/komorebiiluvu/LightNovelReader-For-IOS) | iOS 轻小说阅读器 |
+| 轻小说文库 | [jijijitian/light-novel-library_Wenku8_iOS](https://github.com/jijijitian/light-novel-library_Wenku8_iOS) | 轻小说文库 iOS 客户端 |
 
 ## 添加源
 
