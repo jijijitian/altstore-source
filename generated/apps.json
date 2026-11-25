@@ -481,6 +481,16 @@
       },
       "versions": [
         {
+          "version": "1.13.3",
+          "buildVersion": "27",
+          "date": "2026-11-25T03:28:26Z",
+          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.13.2...v1.13.3",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.13.3/app-ios-unsigned.ipa",
+          "size": 11911212,
+          "minOSVersion": "15.0",
+          "sha256": "f09d55bd4701178fcf8a01077c58c4cb99043e94592bd3e1fb4a5c26f8330e94"
+        },
+        {
           "version": "1.13.2",
           "buildVersion": "26",
           "date": "2026-10-18T10:47:40Z",
@@ -569,16 +579,6 @@
           "size": 10206683,
           "minOSVersion": "15.0",
           "sha256": "f03bf6179004b8ec9b46027b7e943648c248f42d02726c7fc157f2b94c38dfff"
-        },
-        {
-          "version": "1.10.0",
-          "buildVersion": "16",
-          "date": "2026-09-05T16:03:22Z",
-          "localizedDescription": "**Full Changelog**: https://github.com/LightNovelShelf/Flutter/compare/v1.9.0...v1.10.0",
-          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.10.0/app-ios-unsigned.ipa",
-          "size": 10159649,
-          "minOSVersion": "15.0",
-          "sha256": "2f241051470d0811140a3bbd28851dea159aa305bf1aff5bf02b8e1b0f10f237"
         }
       ],
       "appPermissions": {
